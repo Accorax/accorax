@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AccoraX - Smart Accounting Software</title>
+
+    <meta name="description"
+          content="AccoraX is modern and easy-to-use accounting software for business, GST, sales, purchase and financial management.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #172033;
+        }
+
+        /* NAVBAR */
+
+        header {
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .download-btn {
+            background: #2563eb;
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 10px;
+        }
+
+        /* HERO */
+
+        .hero {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 620px;
+            padding: 90px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e8efff;
+            color: #2563eb;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            color: #667085;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 11px;
+            font-weight: bold;
+        }
+
+        .primary-btn {
+            background: #2563eb;
+            color: white;
+        }
+
+        .secondary-btn {
+            background: white;
+            color: #2563eb;
+            border: 1px solid #d7def0;
+        }
+
+        /* DASHBOARD MOCKUP */
+
+        .dashboard {
+            width: 500px;
+            height: 340px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 25px 60px rgba(37,99,235,0.18);
+            overflow: hidden;
+            border: 1px solid #e6eaf2;
+        }
+
+        .dash-top {
+            height: 55px;
+            background: #111827;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-weight: bold;
+        }
+
+        .dash-body {
+            display: flex;
+            height: calc(100% - 55px);
+        }
+
+        .sidebar {
+            width: 100px;
+            background: #f1f4f9;
+            padding: 15px 10px;
+        }
+
+        .side-item {
+            height: 30px;
+            background: #dce5f7;
+            border-radius: 7px;
+            margin-bottom: 10px;
+        }
+
+        .main-dashboard {
+            flex: 1;
+            padding: 18px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 10px;
+        }
+
+        .card {
+            flex: 1;
+            height: 65px;
+            border-radius: 10px;
+            background: #eef4ff;
+            padding: 10px;
+        }
+
+        .card small {
+            color: #667085;
+        }
+
+        .card strong {
+            display: block;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+
+        .chart {
+            height: 140px;
+            margin-top: 15px;
+            border-radius: 10px;
+            background:
+                linear-gradient(
+                    160deg,
+                    #edf3ff,
+                    #ffffff
+                );
+            position: relative;
+        }
+
+        .chart-line {
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            top: 70px;
+            height: 3px;
+            background: #2563eb;
+            transform: rotate(-8deg);
+        }
+
+        /* FEATURES */
+
+        .section {
+            padding: 90px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        .features {
+            max-width: 1100px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 13px;
+            background: #eaf1ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+
+        .cta {
+            max-width: 1100px;
+            margin: 40px auto 90px;
+            padding: 65px 30px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            opacity: 0.9;
+            margin-bottom: 28px;
+        }
+
+        .cta a {
+            display: inline-block;
+            background: white;
+            color: #2563eb;
+            padding: 14px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            color: white;
+            padding: 45px 25px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #aeb7c7;
+            margin-top: 10px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .dashboard {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                AX
+            </div>
+
+            AccoraX
+
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#about">About</a>
+
+            <a href="#download">Download</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <a class="download-btn"
+           href="#download">
+            Download
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            Smart Accounting Software
+        </div>
+
+        <h1>
+            Manage Your Business
+            <span>Smarter.</span>
+        </h1>
+
+        <p>
+            AccoraX is a modern accounting solution
+            designed to make business accounting,
+            GST, sales, purchases and financial
+            management simple and powerful.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a class="primary-btn"
+               href="#download">
+                Download AccoraX
+            </a>
+
+            <a class="secondary-btn"
+               href="#features">
+                Explore Features
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- SOFTWARE PREVIEW -->
+
+    <div class="dashboard">
+
+        <div class="dash-top">
+            AccoraX Dashboard
+        </div>
+
+        <div class="dash-body">
+
+            <div class="sidebar">
+
+                <div class="side-item"></div>
+                <div class="side-item"></div>
+                <div class="side-item"></div>
+                <div class="side-item"></div>
+                <div class="side-item"></div>
+
+            </div>
+
+            <div class="main-dashboard">
+
+                <div class="cards">
+
+                    <div class="card">
+                        <small>Sales</small>
+                        <strong>₹2.45L</strong>
+                    </div>
+
+                    <div class="card">
+                        <small>Purchase</small>
+                        <strong>₹1.32L</strong>
+                    </div>
+
+                    <div class="card">
+                        <small>GST</small>
+                        <strong>₹28K</strong>
+                    </div>
+
+                </div>
+
+                <div class="chart">
+
+                    <div class="chart-line"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="section"
+         id="features">
+
+    <div class="section-title">
+
+        <h2>
+            Everything You Need
+        </h2>
+
+        <p>
+            Powerful tools to manage your
+            business accounting efficiently.
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🧾
+            </div>
+
+            <h3>
+                Sales & Purchase
+            </h3>
+
+            <p>
+                Manage sales invoices,
+                purchases and transactions
+                easily.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📊
+            </div>
+
+            <h3>
+                Business Dashboard
+            </h3>
+
+            <p>
+                Get a clear overview of your
+                business with a modern dashboard.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🧮
+            </div>
+
+            <h3>
+                GST Management
+            </h3>
+
+            <p>
+                Manage GST-related transactions
+                and summaries efficiently.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                👥
+            </div>
+
+            <h3>
+                Customer & Ledger
+            </h3>
+
+            <p>
+                Manage customers, suppliers,
+                ledgers and accounts in one place.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📦
+            </div>
+
+            <h3>
+                Inventory
+            </h3>
+
+            <p>
+                Keep track of items, units,
+                stock and inventory transactions.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔐
+            </div>
+
+            <h3>
+                Secure Data
+            </h3>
+
+            <p>
+                Keep your accounting information
+                organized and protected.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section"
+         id="about">
+
+    <div class="section-title">
+
+        <h2>
+            About AccoraX
+        </h2>
+
+        <p>
+            AccoraX is designed to provide
+            businesses with a simple, modern
+            and efficient accounting experience.
+            From daily transactions to GST and
+            financial management, everything is
+            brought together in one place.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- DOWNLOAD -->
+
+<section class="cta"
+         id="download">
+
+    <h2>
+        Ready to simplify your accounting?
+    </h2>
+
+    <p>
+        Download AccoraX and manage your
+        business smarter.
+    </p>
+
+    <a href="#">
+        Download Now
+    </a>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<footer id="contact">
+
+    <h2>
+        AccoraX
+    </h2>
+
+    <p>
+        Smart & Simple Accounting Software
+    </p>
+
+    <p>
+        © 2026 AccoraX. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
