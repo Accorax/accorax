@@ -3,990 +3,1031 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <title>AccoraX | Smart Accounting Software</title>
+<title>AccoraX | Smart Accounting Software</title>
 
-    <meta name="description"
-          content="AccoraX is a modern accounting software for business accounting, GST, sales, purchase, inventory and financial management.">
+<meta name="description"
+      content="AccoraX is a modern accounting software for GST, sales, purchase, inventory and business accounting.">
 
-    <style>
+<style>
 
-        /* =========================
-           RESET
-        ========================= */
+/* =====================================================
+   GLOBAL
+===================================================== */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f6f8fc;
-            color: #172033;
-            line-height: 1.6;
-        }
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f6f8fc;
+    color:#172033;
+    line-height:1.6;
+}
 
-        img {
-            max-width: 100%;
-        }
+img{
+    max-width:100%;
+}
 
-        a {
-            text-decoration: none;
-        }
+a{
+    text-decoration:none;
+}
 
 
-        /* =========================
-           HEADER
-        ========================= */
+/* =====================================================
+   HEADER
+===================================================== */
 
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 9999;
+header{
+    position:sticky;
+    top:0;
+    z-index:9999;
 
-            background: rgba(255,255,255,0.96);
+    background:rgba(255,255,255,.96);
 
-            backdrop-filter: blur(10px);
+    backdrop-filter:blur(10px);
 
-            border-bottom: 1px solid #e8ecf3;
-        }
+    border-bottom:1px solid #e8ecf3;
+}
 
-        .navbar {
-            max-width: 1200px;
-            height: 76px;
+.navbar{
+    max-width:1200px;
+    height:76px;
 
-            margin: auto;
-            padding: 0 25px;
+    margin:auto;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    padding:0 25px;
 
-            gap: 25px;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
+    gap:25px;
+}
 
-        /* LOGO */
 
-        .logo img {
-            height: 48px;
-            width: auto;
+/* LOGO */
 
-            display: block;
+.logo img{
+    height:48px;
+    width:auto;
 
-            object-fit: contain;
-        }
+    display:block;
 
+    object-fit:contain;
+}
 
-        /* NAVIGATION */
 
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
+/* NAVIGATION */
 
-        nav a {
-            color: #4b5563;
+nav{
+    display:flex;
+    align-items:center;
 
-            font-size: 15px;
-            font-weight: 600;
+    gap:27px;
+}
 
-            transition: 0.25s;
-        }
+nav a{
+    color:#4b5563;
 
-        nav a:hover {
-            color: #2563eb;
-        }
+    font-size:15px;
 
+    font-weight:600;
 
-        /* NAV BUTTON */
+    transition:.25s;
+}
 
-        .nav-download {
-            background: #2563eb;
-            color: white;
+nav a:hover{
+    color:#2563eb;
+}
 
-            padding: 11px 20px;
 
-            border-radius: 10px;
+/* DOWNLOAD BUTTON */
 
-            font-weight: 700;
+.nav-download{
+    background:#2563eb;
 
-            transition: 0.25s;
-        }
+    color:white;
 
-        .nav-download:hover {
-            background: #1d4ed8;
+    padding:11px 20px;
 
-            transform: translateY(-2px);
-        }
+    border-radius:10px;
 
+    font-weight:700;
 
-        /* =========================
-           HERO
-        ========================= */
+    transition:.25s;
+}
 
-        .hero {
-            max-width: 1200px;
+.nav-download:hover{
+    background:#1d4ed8;
 
-            min-height: 650px;
+    transform:translateY(-2px);
+}
 
-            margin: auto;
 
-            padding: 90px 25px;
+/* =====================================================
+   HERO
+===================================================== */
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+.hero{
+    max-width:1200px;
 
-            gap: 65px;
-        }
+    min-height:650px;
 
-        .hero-left {
-            flex: 1;
+    margin:auto;
 
-            max-width: 590px;
-        }
+    padding:90px 25px;
 
+    display:flex;
 
-        /* BADGE */
+    align-items:center;
 
-        .hero-badge {
-            display: inline-block;
+    justify-content:space-between;
 
-            padding: 8px 16px;
+    gap:60px;
+}
 
-            border-radius: 30px;
+.hero-left{
+    flex:1;
 
-            background: #eaf1ff;
+    max-width:600px;
+}
 
-            color: #2563eb;
 
-            font-size: 14px;
+/* BADGE */
 
-            font-weight: 700;
+.hero-badge{
+    display:inline-block;
 
-            margin-bottom: 20px;
-        }
+    padding:8px 16px;
 
+    border-radius:30px;
 
-        /* HERO TITLE */
+    background:#eaf1ff;
 
-        .hero h1 {
-            font-size: 58px;
+    color:#2563eb;
 
-            line-height: 1.08;
+    font-size:14px;
 
-            letter-spacing: -1.5px;
+    font-weight:700;
 
-            margin-bottom: 24px;
-        }
+    margin-bottom:20px;
+}
 
-        .hero h1 span {
-            color: #2563eb;
-        }
 
+/* TITLE */
 
-        /* HERO DESCRIPTION */
+.hero h1{
+    font-size:58px;
 
-        .hero-description {
-            color: #667085;
+    line-height:1.08;
 
-            font-size: 18px;
+    letter-spacing:-1.5px;
 
-            line-height: 1.8;
+    margin-bottom:24px;
+}
 
-            margin-bottom: 32px;
-        }
+.hero h1 span{
+    color:#2563eb;
+}
 
 
-        /* HERO BUTTONS */
+/* DESCRIPTION */
 
-        .hero-buttons {
-            display: flex;
+.hero-description{
+    color:#667085;
 
-            gap: 14px;
+    font-size:18px;
 
-            flex-wrap: wrap;
-        }
+    line-height:1.8;
 
-        .btn-primary {
-            display: inline-block;
+    margin-bottom:32px;
+}
 
-            background: #2563eb;
 
-            color: white;
+/* BUTTONS */
 
-            padding: 15px 25px;
+.hero-buttons{
+    display:flex;
 
-            border-radius: 11px;
+    gap:14px;
 
-            font-weight: 700;
+    flex-wrap:wrap;
+}
 
-            box-shadow:
-                0 10px 25px rgba(37,99,235,0.20);
+.btn-primary{
+    display:inline-block;
 
-            transition: 0.25s;
-        }
+    background:#2563eb;
 
-        .btn-primary:hover {
-            background: #1d4ed8;
+    color:white;
 
-            transform: translateY(-2px);
-        }
+    padding:15px 25px;
 
-        .btn-secondary {
-            display: inline-block;
+    border-radius:11px;
 
-            background: white;
+    font-weight:700;
 
-            color: #2563eb;
+    box-shadow:
+    0 10px 25px rgba(37,99,235,.20);
 
-            border: 1px solid #d9e0ed;
+    transition:.25s;
+}
 
-            padding: 15px 25px;
+.btn-primary:hover{
+    background:#1d4ed8;
 
-            border-radius: 11px;
+    transform:translateY(-3px);
+}
 
-            font-weight: 700;
+.btn-secondary{
+    display:inline-block;
 
-            transition: 0.25s;
-        }
+    background:white;
 
-        .btn-secondary:hover {
-            background: #eef4ff;
+    color:#2563eb;
 
-            transform: translateY(-2px);
-        }
+    border:1px solid #d9e0ed;
 
+    padding:15px 25px;
 
-        /* =========================
-           DASHBOARD PREVIEW
-        ========================= */
+    border-radius:11px;
 
-        .hero-right {
-            flex: 1;
+    font-weight:700;
 
-            display: flex;
+    transition:.25s;
+}
 
-            justify-content: center;
-        }
+.btn-secondary:hover{
+    background:#eef4ff;
 
-        .dashboard-card {
-            width: 550px;
+    transform:translateY(-3px);
+}
 
-            max-width: 100%;
 
-            background: white;
+/* =====================================================
+   DASHBOARD PREVIEW
+===================================================== */
 
-            padding: 10px;
+.hero-right{
+    flex:1;
 
-            border-radius: 22px;
+    display:flex;
 
-            border: 1px solid #e5e9f1;
+    justify-content:center;
+}
 
-            box-shadow:
-                0 25px 70px rgba(20,40,80,0.16);
+.dashboard-card{
+    width:550px;
 
-            transform:
-                perspective(1000px)
-                rotateY(-2deg);
+    max-width:100%;
 
-            transition: 0.35s;
-        }
+    background:white;
 
-        .dashboard-card:hover {
-            transform:
-                perspective(1000px)
-                rotateY(0deg)
-                translateY(-5px);
-        }
+    padding:10px;
 
-        .dashboard-card img {
-            width: 100%;
+    border-radius:22px;
 
-            display: block;
+    border:1px solid #e5e9f1;
 
-            border-radius: 15px;
-        }
+    box-shadow:
+    0 25px 70px rgba(20,40,80,.16);
 
+    transition:.35s;
+}
 
-        /* =========================
-           STATS
-        ========================= */
+.dashboard-card:hover{
+    transform:translateY(-7px);
+}
 
-        .stats {
-            max-width: 1050px;
+.dashboard-card img{
+    width:100%;
 
-            margin: -20px auto 70px;
+    display:block;
 
-            padding: 0 25px;
+    border-radius:15px;
+}
 
-            display: grid;
 
-            grid-template-columns:
-                repeat(3,1fr);
+/* =====================================================
+   STATS
+===================================================== */
 
-            gap: 20px;
-        }
+.stats{
+    max-width:1050px;
 
-        .stat {
-            background: white;
+    margin:0 auto 70px;
 
-            border: 1px solid #e9edf4;
+    padding:0 25px;
 
-            border-radius: 16px;
+    display:grid;
 
-            padding: 25px;
+    grid-template-columns:
+    repeat(3,1fr);
 
-            text-align: center;
+    gap:20px;
+}
 
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.04);
-        }
+.stat{
+    background:white;
 
-        .stat h3 {
-            color: #2563eb;
+    border:1px solid #e9edf4;
 
-            font-size: 30px;
+    border-radius:16px;
 
-            margin-bottom: 5px;
-        }
+    padding:25px;
 
-        .stat p {
-            color: #667085;
+    text-align:center;
 
-            font-size: 14px;
-        }
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.04);
 
+    transition:.25s;
+}
 
-        /* =========================
-           GENERAL SECTION
-        ========================= */
+.stat:hover{
+    transform:translateY(-4px);
+}
 
-        .section {
-            padding: 90px 25px;
-        }
+.stat h3{
+    color:#2563eb;
 
-        .section-heading {
-            text-align: center;
+    font-size:30px;
 
-            max-width: 720px;
+    margin-bottom:5px;
+}
 
-            margin: auto;
-        }
+.stat p{
+    color:#667085;
 
-        .section-heading h2 {
-            font-size: 40px;
+    font-size:14px;
+}
 
-            line-height: 1.2;
 
-            margin-bottom: 15px;
-        }
+/* =====================================================
+   SECTION
+===================================================== */
 
-        .section-heading p {
-            color: #667085;
+.section{
+    padding:90px 25px;
+}
 
-            line-height: 1.7;
-        }
+.section-heading{
+    text-align:center;
 
+    max-width:720px;
 
-        /* =========================
-           FEATURES
-        ========================= */
+    margin:auto;
+}
 
-        .features {
-            max-width: 1100px;
+.section-heading h2{
+    font-size:40px;
 
-            margin: 50px auto 0;
+    line-height:1.2;
 
-            display: grid;
+    margin-bottom:15px;
+}
 
-            grid-template-columns:
-                repeat(3,1fr);
+.section-heading p{
+    color:#667085;
 
-            gap: 22px;
-        }
+    line-height:1.7;
+}
 
-        .feature-card {
-            background: white;
 
-            border: 1px solid #e9edf4;
+/* =====================================================
+   FEATURES
+===================================================== */
 
-            border-radius: 18px;
+.features{
+    max-width:1100px;
 
-            padding: 30px;
+    margin:50px auto 0;
 
-            box-shadow:
-                0 8px 30px rgba(0,0,0,0.04);
+    display:grid;
 
-            transition: 0.3s;
-        }
+    grid-template-columns:
+    repeat(3,1fr);
 
-        .feature-card:hover {
-            transform: translateY(-7px);
+    gap:22px;
+}
 
-            box-shadow:
-                0 18px 40px rgba(0,0,0,0.08);
-        }
+.feature-card{
+    background:white;
 
-        .feature-icon {
-            width: 55px;
-            height: 55px;
+    border:1px solid #e9edf4;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    border-radius:18px;
 
-            border-radius: 15px;
+    padding:30px;
 
-            background: #eaf1ff;
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.04);
 
-            font-size: 25px;
+    transition:.3s;
+}
 
-            margin-bottom: 18px;
-        }
+.feature-card:hover{
+    transform:translateY(-7px);
 
-        .feature-card h3 {
-            font-size: 20px;
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.08);
+}
 
-            margin-bottom: 10px;
-        }
+.feature-icon{
+    width:55px;
+    height:55px;
 
-        .feature-card p {
-            color: #667085;
+    display:flex;
 
-            font-size: 15px;
+    align-items:center;
 
-            margin-bottom: 18px;
-        }
+    justify-content:center;
 
-        .feature-link {
-            color: #2563eb;
+    border-radius:15px;
 
-            font-size: 14px;
+    background:#eaf1ff;
 
-            font-weight: 700;
-        }
+    font-size:25px;
 
-        .feature-link:hover {
-            color: #1d4ed8;
-        }
+    margin-bottom:18px;
+}
 
+.feature-card h3{
+    font-size:20px;
 
-        /* =========================
-           ABOUT
-        ========================= */
+    margin-bottom:10px;
+}
 
-        .about {
-            background: white;
-        }
+.feature-card p{
+    color:#667085;
 
-        .about-box {
-            max-width: 1000px;
+    font-size:15px;
 
-            margin: 45px auto 0;
+    margin-bottom:18px;
+}
 
-            background: #f7f9fd;
+.feature-link{
+    color:#2563eb;
 
-            border: 1px solid #e8ecf3;
+    font-size:14px;
 
-            border-radius: 20px;
+    font-weight:700;
+}
 
-            padding: 45px;
 
-            text-align: center;
-        }
+/* =====================================================
+   SCREENSHOTS
+===================================================== */
 
-        .about-box p {
-            color: #667085;
+.screenshot-section{
+    background:white;
+}
 
-            font-size: 17px;
+.screenshots{
+    max-width:1100px;
 
-            line-height: 1.8;
-        }
+    margin:50px auto 0;
 
+    display:grid;
 
-        /* =========================
-           SCREENSHOTS
-        ========================= */
+    grid-template-columns:
+    repeat(2,1fr);
 
-        .screenshots {
-            max-width: 1100px;
+    gap:25px;
+}
 
-            margin: 50px auto 0;
+.screenshot-card{
+    background:#f8fafc;
 
-            display: grid;
+    border:1px solid #e5e9f1;
 
-            grid-template-columns:
-                repeat(2,1fr);
+    border-radius:18px;
 
-            gap: 25px;
-        }
+    padding:10px;
 
-        .screenshot-card {
-            background: white;
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.06);
 
-            border: 1px solid #e5e9f1;
+    overflow:hidden;
 
-            border-radius: 18px;
+    transition:.3s;
+}
 
-            padding: 10px;
+.screenshot-card:hover{
+    transform:translateY(-5px);
 
-            box-shadow:
-                0 10px 35px rgba(0,0,0,0.06);
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.10);
+}
 
-            overflow: hidden;
+.screenshot-card img{
+    width:100%;
 
-            transition: 0.3s;
-        }
+    display:block;
 
-        .screenshot-card:hover {
-            transform: translateY(-5px);
+    border-radius:12px;
+}
 
-            box-shadow:
-                0 20px 45px rgba(0,0,0,0.10);
-        }
+.screenshot-title{
+    padding:18px 10px 12px;
 
-        .screenshot-card img {
-            width: 100%;
+    font-size:18px;
 
-            display: block;
+    font-weight:700;
+}
 
-            border-radius: 12px;
-        }
 
-        .screenshot-title {
-            padding: 18px 10px 12px;
+/* =====================================================
+   ABOUT
+===================================================== */
 
-            font-size: 18px;
+.about{
+    background:#f6f8fc;
+}
 
-            font-weight: 700;
-        }
+.about-box{
+    max-width:1000px;
 
+    margin:45px auto 0;
 
-        /* =========================
-           GST SECTION
-        ========================= */
+    background:white;
 
-        .gst-section {
-            background: #f0f5ff;
-        }
+    border:1px solid #e8ecf3;
 
-        .gst-box {
-            max-width: 1100px;
+    border-radius:20px;
 
-            margin: 50px auto 0;
+    padding:45px;
 
-            display: grid;
+    text-align:center;
 
-            grid-template-columns:
-                1fr 1fr;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.04);
+}
 
-            gap: 40px;
+.about-box p{
+    color:#667085;
 
-            align-items: center;
-        }
+    font-size:17px;
 
-        .gst-content h3 {
-            font-size: 32px;
+    line-height:1.9;
+}
 
-            margin-bottom: 18px;
-        }
 
-        .gst-content p {
-            color: #667085;
+/* =====================================================
+   GST
+===================================================== */
 
-            margin-bottom: 22px;
+.gst-section{
+    background:#eef4ff;
+}
 
-            line-height: 1.8;
-        }
+.gst-box{
+    max-width:1100px;
 
-        .gst-list {
-            list-style: none;
-        }
+    margin:50px auto 0;
 
-        .gst-list li {
-            background: white;
+    display:grid;
 
-            margin-bottom: 10px;
+    grid-template-columns:
+    1fr 1fr;
 
-            padding: 12px 15px;
+    gap:40px;
 
-            border-radius: 10px;
+    align-items:center;
+}
 
-            border: 1px solid #e4eaf5;
+.gst-content h3{
+    font-size:32px;
 
-            font-weight: 600;
-        }
+    margin-bottom:18px;
+}
 
-        .gst-list li::before {
-            content: "✓";
+.gst-content p{
+    color:#667085;
 
-            color: #2563eb;
+    margin-bottom:22px;
 
-            margin-right: 10px;
+    line-height:1.8;
+}
 
-            font-weight: bold;
-        }
+.gst-list{
+    list-style:none;
+}
 
-        .gst-image {
-            background: white;
+.gst-list li{
+    background:white;
 
-            padding: 10px;
+    margin-bottom:10px;
 
-            border-radius: 20px;
+    padding:12px 15px;
 
-            box-shadow:
-                0 20px 50px rgba(37,99,235,0.12);
-        }
+    border-radius:10px;
 
-        .gst-image img {
-            width: 100%;
+    border:1px solid #e4eaf5;
 
-            border-radius: 14px;
+    font-weight:600;
+}
 
-            display: block;
-        }
+.gst-list li::before{
+    content:"✓";
 
+    color:#2563eb;
 
-        /* =========================
-           DOWNLOAD CTA
-        ========================= */
+    margin-right:10px;
 
-        .download-section {
-            max-width: 1100px;
+    font-weight:bold;
+}
 
-            margin: 90px auto;
+.gst-image{
+    background:white;
 
-            padding: 70px 30px;
+    padding:10px;
 
-            border-radius: 28px;
+    border-radius:20px;
 
-            text-align: center;
+    box-shadow:
+    0 20px 50px rgba(37,99,235,.12);
+}
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #2563eb,
-                    #6d28d9
-                );
+.gst-image img{
+    width:100%;
 
-            color: white;
+    border-radius:14px;
 
-            box-shadow:
-                0 25px 60px rgba(37,99,235,0.20);
-        }
+    display:block;
+}
 
-        .download-section h2 {
-            font-size: 40px;
 
-            margin-bottom: 15px;
-        }
+/* =====================================================
+   DOWNLOAD
+===================================================== */
 
-        .download-section p {
-            opacity: 0.9;
+.download-section{
+    max-width:1100px;
 
-            margin-bottom: 30px;
-        }
+    margin:90px auto;
 
-        .download-button {
-            display: inline-block;
+    padding:70px 30px;
 
-            background: white;
+    border-radius:28px;
 
-            color: #2563eb;
+    text-align:center;
 
-            padding: 15px 28px;
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #6d28d9
+    );
 
-            border-radius: 11px;
+    color:white;
 
-            font-weight: 700;
+    box-shadow:
+    0 25px 60px rgba(37,99,235,.20);
+}
 
-            transition: 0.25s;
-        }
+.download-section h2{
+    font-size:40px;
 
-        .download-button:hover {
-            transform: translateY(-2px);
+    margin-bottom:15px;
+}
 
-            background: #f8fafc;
-        }
+.download-section p{
+    opacity:.9;
 
+    margin-bottom:30px;
+}
 
-        /* =========================
-           CONTACT
-        ========================= */
+.download-button{
+    display:inline-block;
 
-        .contact-box {
-            max-width: 900px;
+    background:white;
 
-            margin: 45px auto 0;
+    color:#2563eb;
 
-            display: grid;
+    padding:15px 28px;
 
-            grid-template-columns:
-                repeat(3,1fr);
+    border-radius:11px;
 
-            gap: 20px;
-        }
+    font-weight:700;
 
-        .contact-card {
-            background: white;
+    transition:.25s;
+}
 
-            border: 1px solid #e8ecf3;
+.download-button:hover{
+    transform:translateY(-3px);
+}
 
-            border-radius: 16px;
 
-            padding: 25px;
+/* =====================================================
+   CONTACT
+===================================================== */
 
-            text-align: center;
-        }
+.contact-box{
+    max-width:900px;
 
-        .contact-card .contact-icon {
-            font-size: 28px;
+    margin:45px auto 0;
 
-            margin-bottom: 10px;
-        }
+    display:grid;
 
-        .contact-card h3 {
-            margin-bottom: 5px;
-        }
+    grid-template-columns:
+    repeat(3,1fr);
 
-        .contact-card p {
-            color: #667085;
+    gap:20px;
+}
 
-            font-size: 14px;
-        }
+.contact-card{
+    background:white;
 
+    border:1px solid #e8ecf3;
 
-        /* =========================
-           FOOTER
-        ========================= */
+    border-radius:16px;
 
-        footer {
-            background: #111827;
+    padding:25px;
 
-            color: white;
+    text-align:center;
 
-            padding: 55px 25px 30px;
-        }
+    transition:.25s;
+}
 
-        .footer-content {
-            max-width: 1100px;
+.contact-card:hover{
+    transform:translateY(-5px);
+}
 
-            margin: auto;
+.contact-icon{
+    font-size:28px;
 
-            display: grid;
+    margin-bottom:10px;
+}
 
-            grid-template-columns:
-                2fr 1fr 1fr;
+.contact-card h3{
+    margin-bottom:5px;
+}
 
-            gap: 50px;
-        }
+.contact-card p{
+    color:#667085;
 
-        .footer-logo img {
-            height: 45px;
+    font-size:14px;
+}
 
-            margin-bottom: 15px;
-        }
 
-        .footer-column h3 {
-            margin-bottom: 15px;
-        }
+/* =====================================================
+   LEGAL
+===================================================== */
 
-        .footer-column a {
-            display: block;
+.legal{
+    background:white;
+}
 
-            color: #aeb7c7;
+.legal-container{
+    max-width:1000px;
 
-            margin-bottom: 9px;
+    margin:45px auto 0;
+}
 
-            font-size: 14px;
-        }
+.legal-box{
+    background:#f8fafc;
 
-        .footer-column a:hover {
-            color: white;
-        }
+    border:1px solid #e7ebf2;
 
-        .footer-description {
-            color: #aeb7c7;
+    border-radius:16px;
 
-            max-width: 400px;
-        }
+    padding:30px;
 
-        .copyright {
-            max-width: 1100px;
+    margin-bottom:20px;
+}
 
-            margin: 40px auto 0;
+.legal-box h3{
+    margin-bottom:10px;
+}
 
-            padding-top: 20px;
+.legal-box p{
+    color:#667085;
 
-            border-top: 1px solid #273142;
+    line-height:1.8;
+}
 
-            color: #8f9bad;
 
-            font-size: 13px;
+/* =====================================================
+   FOOTER
+===================================================== */
 
-            text-align: center;
-        }
+footer{
+    background:#111827;
 
+    color:white;
 
-        /* =========================
-           MOBILE
-        ========================= */
+    padding:55px 25px 30px;
+}
 
-        @media (max-width: 950px) {
+.footer-content{
+    max-width:1100px;
 
-            nav {
-                display: none;
-            }
+    margin:auto;
 
-            .hero {
-                flex-direction: column;
+    display:grid;
 
-                text-align: center;
+    grid-template-columns:
+    2fr 1fr 1fr;
 
-                padding-top: 65px;
-            }
+    gap:50px;
+}
 
-            .hero-left {
-                max-width: 700px;
-            }
+.footer-logo img{
+    height:45px;
 
-            .hero-buttons {
-                justify-content: center;
-            }
+    margin-bottom:15px;
+}
 
-            .hero h1 {
-                font-size: 46px;
-            }
+.footer-description{
+    color:#aeb7c7;
 
-            .hero-right {
-                width: 100%;
-            }
+    max-width:400px;
+}
 
-            .dashboard-card {
-                width: 650px;
-            }
+.footer-column h3{
+    margin-bottom:15px;
+}
 
-            .features {
-                grid-template-columns:
-                    repeat(2,1fr);
-            }
+.footer-column a{
+    display:block;
 
-            .gst-box {
-                grid-template-columns: 1fr;
-            }
+    color:#aeb7c7;
 
-            .footer-content {
-                grid-template-columns:
-                    1fr 1fr;
-            }
-        }
+    margin-bottom:9px;
 
+    font-size:14px;
+}
 
-        @media (max-width: 650px) {
+.footer-column a:hover{
+    color:white;
+}
 
-            .navbar {
-                justify-content: center;
-            }
+.copyright{
+    max-width:1100px;
 
-            .nav-download {
-                display: none;
-            }
+    margin:40px auto 0;
 
-            .logo img {
-                height: 43px;
-            }
+    padding-top:20px;
 
-            .hero {
-                padding: 55px 18px;
-            }
+    border-top:1px solid #273142;
 
-            .hero h1 {
-                font-size: 37px;
+    color:#8f9bad;
 
-                letter-spacing: -0.8px;
-            }
+    font-size:13px;
 
-            .hero-description {
-                font-size: 16px;
-            }
+    text-align:center;
+}
 
-            .hero-buttons {
-                flex-direction: column;
-            }
 
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
+/* =====================================================
+   MOBILE
+===================================================== */
 
-                text-align: center;
-            }
+@media(max-width:950px){
 
-            .stats {
-                grid-template-columns: 1fr;
+    nav{
+        display:none;
+    }
 
-                margin-top: 0;
-            }
+    .hero{
+        flex-direction:column;
 
-            .section {
-                padding: 65px 18px;
-            }
+        text-align:center;
 
-            .section-heading h2 {
-                font-size: 32px;
-            }
+        padding-top:65px;
+    }
 
-            .features {
-                grid-template-columns: 1fr;
-            }
+    .hero-left{
+        max-width:700px;
+    }
 
-            .about-box {
-                padding: 30px 20px;
-            }
+    .hero-buttons{
+        justify-content:center;
+    }
 
-            .screenshots {
-                grid-template-columns: 1fr;
-            }
+    .hero h1{
+        font-size:46px;
+    }
 
-            .gst-content h3 {
-                font-size: 27px;
-            }
+    .features{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
 
-            .download-section {
-                margin: 60px 18px;
+    .gst-box{
+        grid-template-columns:1fr;
+    }
 
-                padding: 50px 20px;
-            }
+    .footer-content{
+        grid-template-columns:
+        1fr 1fr;
+    }
+}
 
-            .download-section h2 {
-                font-size: 30px;
-            }
 
-            .contact-box {
-                grid-template-columns: 1fr;
-            }
+@media(max-width:650px){
 
-            .footer-content {
-                grid-template-columns: 1fr;
+    .navbar{
+        justify-content:center;
+    }
 
-                gap: 30px;
-            }
+    .nav-download{
+        display:none;
+    }
 
-        }
+    .logo img{
+        height:43px;
+    }
 
-    </style>
+    .hero{
+        padding:55px 18px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+
+        text-align:center;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+
+        margin-top:0;
+    }
+
+    .section{
+        padding:65px 18px;
+    }
+
+    .section-heading h2{
+        font-size:32px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .about-box{
+        padding:30px 20px;
+    }
+
+    .screenshots{
+        grid-template-columns:1fr;
+    }
+
+    .gst-content h3{
+        font-size:27px;
+    }
+
+    .download-section{
+        margin:60px 18px;
+
+        padding:50px 20px;
+    }
+
+    .download-section h2{
+        font-size:30px;
+    }
+
+    .contact-box{
+        grid-template-columns:1fr;
+    }
+
+    .footer-content{
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -994,1181 +1035,1269 @@
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
-    <div class="navbar">
+<div class="navbar">
 
 
-        <a href="#home" class="logo">
+<a href="#home" class="logo">
 
-            <img
-                src="images/logo.png"
-                alt="AccoraX Logo">
+<img
+src="images/logo.png"
+alt="AccoraX Logo">
 
-        </a>
-
-
-        <nav>
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#features">
-                Features
-            </a>
-
-            <a href="#screenshots">
-                Screenshots
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#download">
-                Download
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </nav>
+</a>
 
 
-        <a
-            href="#download"
-            class="nav-download">
+<nav>
 
-            Download
+<a href="#home">Home</a>
 
-        </a>
+<a href="#features">Features</a>
+
+<a href="#screenshots">Screenshots</a>
+
+<a href="#about">About</a>
+
+<a href="#gst">GST</a>
+
+<a href="#download">Download</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
 
 
-    </div>
+<a
+href="#download"
+class="nav-download">
+
+Download
+
+</a>
+
+
+</div>
 
 </header>
 
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- =====================================================
+     HOME
+===================================================== -->
 
 <section
-    class="hero"
-    id="home">
+class="hero"
+id="home">
 
 
-    <div class="hero-left">
+<div class="hero-left">
 
 
-        <div class="hero-badge">
+<div class="hero-badge">
 
-            ✨ Smart Accounting Software
+✨ Smart Accounting Software
 
-        </div>
-
-
-        <h1>
-
-            Manage Your Business
-            <span>Smarter.</span>
-
-        </h1>
+</div>
 
 
-        <p class="hero-description">
+<h1>
 
-            AccoraX is a modern accounting solution
-            designed to make business accounting,
-            GST, sales, purchases, inventory and
-            financial management simple, fast and powerful.
+Manage Your Business
 
-        </p>
+<span>Smarter.</span>
 
-
-        <div class="hero-buttons">
+</h1>
 
 
-            <a
-                href="#download"
-                class="btn-primary">
+<p class="hero-description">
 
-                ⬇ Download AccoraX
+AccoraX is a modern accounting solution
+designed to make business accounting,
+GST, sales, purchases, inventory and
+financial management simple, fast and powerful.
 
-            </a>
-
-
-            <a
-                href="#features"
-                class="btn-secondary">
-
-                Explore Features
-
-            </a>
+</p>
 
 
-        </div>
+<div class="hero-buttons">
 
 
-    </div>
+<a
+href="#download"
+class="btn-primary">
+
+⬇ Download AccoraX
+
+</a>
+
+
+<a
+href="#features"
+class="btn-secondary">
+
+Explore Features
+
+</a>
+
+
+</div>
+
+
+</div>
 
 
 
-    <!-- DASHBOARD -->
-
-    <div class="hero-right">
+<div class="hero-right">
 
 
-        <div class="dashboard-card">
+<div class="dashboard-card">
 
 
-            <img
-                src="images/dashboard.png"
-                alt="AccoraX Accounting Software Dashboard">
+<img
+src="images/dashboard.png"
+alt="AccoraX Dashboard">
 
 
-        </div>
+</div>
 
 
-    </div>
+</div>
 
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      STATS
-========================= -->
+===================================================== -->
 
 <section class="stats">
 
 
-    <div class="stat">
+<div class="stat">
 
-        <h3>
-            GST
-        </h3>
+<h3>GST</h3>
 
-        <p>
-            Complete GST Management
-        </p>
+<p>
+Complete GST Management
+</p>
 
-    </div>
+</div>
 
 
-    <div class="stat">
+<div class="stat">
 
-        <h3>
-            Easy
-        </h3>
+<h3>Easy</h3>
 
-        <p>
-            Simple & User Friendly
-        </p>
+<p>
+Simple & User Friendly
+</p>
 
-    </div>
+</div>
 
 
-    <div class="stat">
+<div class="stat">
 
-        <h3>
-            Smart
-        </h3>
+<h3>Smart</h3>
 
-        <p>
-            Modern Business Accounting
-        </p>
+<p>
+Modern Business Accounting
+</p>
 
-    </div>
+</div>
 
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      FEATURES
-========================= -->
+===================================================== -->
 
 <section
-    class="section"
-    id="features">
+class="section"
+id="features">
 
 
-    <div class="section-heading">
+<div class="section-heading">
 
 
-        <span class="hero-badge">
+<span class="hero-badge">
 
-            AccoraX Modules
+AccoraX Modules
 
-        </span>
+</span>
 
 
-        <h2>
+<h2>
 
-            Everything Your Business Needs
+Everything Your Business Needs
 
-        </h2>
+</h2>
 
 
-        <p>
+<p>
 
-            Complete accounting, GST, inventory and
-            financial management tools in one powerful
-            software.
+Complete accounting, GST, inventory and
+financial management tools in one powerful
+software.
 
-        </p>
+</p>
 
 
-    </div>
+</div>
 
 
 
-    <div class="features">
+<div class="features">
 
 
-        <div class="feature-card">
+<!-- COMPANY -->
 
-            <div class="feature-icon">
-                🏢
-            </div>
+<div class="feature-card">
 
-            <h3>
-                Company Master
-            </h3>
+<div class="feature-icon">🏢</div>
 
-            <p>
-                Create and manage your business
-                company details and financial year.
-            </p>
+<h3>Company Master</h3>
 
-            <a
-                href="#about"
-                class="feature-link">
+<p>
+Create and manage your business
+company details and financial year.
+</p>
 
-                Learn More →
+<a
+href="#about"
+class="feature-link">
 
-            </a>
+Learn More →
 
-        </div>
+</a>
 
+</div>
 
-        <div class="feature-card">
 
-            <div class="feature-icon">
-                📁
-            </div>
+<!-- GROUP -->
 
-            <h3>
-                Group Master
-            </h3>
+<div class="feature-card">
 
-            <p>
-                Organize your ledgers and accounts
-                into appropriate groups.
-            </p>
+<div class="feature-icon">📁</div>
 
-            <a
-                href="#about"
-                class="feature-link">
+<h3>Group Master</h3>
 
-                Learn More →
+<p>
+Organize your ledgers and accounts
+into appropriate groups.
+</p>
 
-            </a>
+<a
+href="#about"
+class="feature-link">
 
-        </div>
+Learn More →
 
+</a>
 
-        <div class="feature-card">
+</div>
 
-            <div class="feature-icon">
-                📒
-            </div>
 
-            <h3>
-                Ledger Master
-            </h3>
+<!-- LEDGER -->
 
-            <p>
-                Manage customers, suppliers,
-                cash, bank and other accounts.
-            </p>
+<div class="feature-card">
 
-            <a
-                href="#about"
-                class="feature-link">
+<div class="feature-icon">📒</div>
 
-                Learn More →
+<h3>Ledger Master</h3>
 
-            </a>
+<p>
+Manage customers, suppliers,
+cash, bank and other accounts.
+</p>
 
-        </div>
+<a
+href="#about"
+class="feature-link">
 
+Learn More →
 
-        <div class="feature-card">
+</a>
 
-            <div class="feature-icon">
-                📦
-            </div>
+</div>
 
-            <h3>
-                Item Master
-            </h3>
 
-            <p>
-                Manage products, stock details,
-                rates and inventory information.
-            </p>
+<!-- ITEM -->
 
-            <a
-                href="#about"
-                class="feature-link">
+<div class="feature-card">
 
-                Learn More →
+<div class="feature-icon">📦</div>
 
-            </a>
+<h3>Item Master</h3>
 
-        </div>
+<p>
+Manage products, stock details,
+rates and inventory information.
+</p>
 
+<a
+href="#about"
+class="feature-link">
 
-        <div class="feature-card">
+Learn More →
 
-            <div class="feature-icon">
-                ⚖️
-            </div>
+</a>
 
-            <h3>
-                Unit Master
-            </h3>
+</div>
 
-            <p>
-                Create and manage measurement
-                units for your inventory.
-            </p>
 
-            <a
-                href="#about"
-                class="feature-link">
+<!-- UNIT -->
 
-                Learn More →
+<div class="feature-card">
 
-            </a>
+<div class="feature-icon">⚖️</div>
 
-        </div>
+<h3>Unit Master</h3>
 
+<p>
+Create and manage measurement
+units for your inventory.
+</p>
 
-        <div class="feature-card">
+<a
+href="#about"
+class="feature-link">
 
-            <div class="feature-icon">
-                🧾
-            </div>
+Learn More →
 
-            <h3>
-                Sales
-            </h3>
+</a>
 
-            <p>
-                Create professional sales invoices
-                and manage sales transactions.
-            </p>
+</div>
 
-            <a
-                href="#about"
-                class="feature-link">
 
-                Learn More →
+<!-- SALES -->
 
-            </a>
+<div class="feature-card">
 
-        </div>
+<div class="feature-icon">🧾</div>
 
+<h3>Sales</h3>
 
-        <div class="feature-card">
+<p>
+Create professional sales invoices
+and manage sales transactions.
+</p>
 
-            <div class="feature-icon">
-                🛒
-            </div>
+<a
+href="#about"
+class="feature-link">
 
-            <h3>
-                Purchase
-            </h3>
+Learn More →
 
-            <p>
-                Record purchase transactions and
-                maintain supplier accounts.
-            </p>
+</a>
 
-            <a
-                href="#about"
-                class="feature-link">
+</div>
 
-                Learn More →
 
-            </a>
+<!-- PURCHASE -->
 
-        </div>
+<div class="feature-card">
 
+<div class="feature-icon">🛒</div>
 
-        <div class="feature-card">
+<h3>Purchase</h3>
 
-            <div class="feature-icon">
-                💵
-            </div>
+<p>
+Record purchase transactions and
+maintain supplier accounts.
+</p>
 
-            <h3>
-                Payment
-            </h3>
+<a
+href="#about"
+class="feature-link">
 
-            <p>
-                Record payments and maintain
-                cash and bank transactions.
-            </p>
+Learn More →
 
-            <a
-                href="#about"
-                class="feature-link">
+</a>
 
-                Learn More →
+</div>
 
-            </a>
 
-        </div>
+<!-- PAYMENT -->
 
+<div class="feature-card">
 
-        <div class="feature-card">
+<div class="feature-icon">💵</div>
 
-            <div class="feature-icon">
-                💰
-            </div>
+<h3>Payment</h3>
 
-            <h3>
-                Receipt
-            </h3>
+<p>
+Record payments and maintain
+cash and bank transactions.
+</p>
 
-            <p>
-                Record customer receipts and
-                manage incoming payments.
-            </p>
+<a
+href="#about"
+class="feature-link">
 
-            <a
-                href="#about"
-                class="feature-link">
+Learn More →
 
-                Learn More →
+</a>
 
-            </a>
+</div>
 
-        </div>
 
+<!-- RECEIPT -->
 
-        <div class="feature-card">
+<div class="feature-card">
 
-            <div class="feature-icon">
-                📑
-            </div>
+<div class="feature-icon">💰</div>
 
-            <h3>
-                Journal
-            </h3>
+<h3>Receipt</h3>
 
-            <p>
-                Record adjustment entries and
-                other accounting transactions.
-            </p>
+<p>
+Record customer receipts and
+manage incoming payments.
+</p>
 
-            <a
-                href="#about"
-                class="feature-link">
+<a
+href="#about"
+class="feature-link">
 
-                Learn More →
+Learn More →
 
-            </a>
+</a>
 
-        </div>
+</div>
 
 
-        <div class="feature-card">
+<!-- JOURNAL -->
 
-            <div class="feature-icon">
-                🧮
-            </div>
+<div class="feature-card">
 
-            <h3>
-                GST Summary
-            </h3>
+<div class="feature-icon">📑</div>
 
-            <p>
-                View GST-related transactions and
-                important tax summaries.
-            </p>
+<h3>Journal</h3>
 
-            <a
-                href="#gst"
-                class="feature-link">
+<p>
+Record adjustment entries and
+other accounting transactions.
+</p>
 
-                Learn More →
+<a
+href="#about"
+class="feature-link">
 
-            </a>
+Learn More →
 
-        </div>
+</a>
 
+</div>
 
-        <div class="feature-card">
 
-            <div class="feature-icon">
-                💳
-            </div>
+<!-- GST -->
 
-            <h3>
-                Cash Book
-            </h3>
+<div class="feature-card">
 
-            <p>
-                Track cash receipts, payments and
-                daily cash balances.
-            </p>
+<div class="feature-icon">🧮</div>
 
-            <a
-                href="#about"
-                class="feature-link">
+<h3>GST Summary</h3>
 
-                Learn More →
+<p>
+View GST-related transactions
+and important tax summaries.
+</p>
 
-            </a>
+<a
+href="#gst"
+class="feature-link">
 
-        </div>
+Learn More →
 
+</a>
 
-        <div class="feature-card">
+</div>
 
-            <div class="feature-icon">
-                🏦
-            </div>
 
-            <h3>
-                Bank Book
-            </h3>
+<!-- CASH BOOK -->
 
-            <p>
-                Manage bank transactions and
-                account balances efficiently.
-            </p>
+<div class="feature-card">
 
-            <a
-                href="#about"
-                class="feature-link">
+<div class="feature-icon">💳</div>
 
-                Learn More →
+<h3>Cash Book</h3>
 
-            </a>
+<p>
+Track cash receipts, payments
+and daily cash balances.
+</p>
 
-        </div>
+<a
+href="#about"
+class="feature-link">
 
+Learn More →
 
-        <div class="feature-card">
+</a>
 
-            <div class="feature-icon">
-                📅
-            </div>
+</div>
 
-            <h3>
-                Day Book
-            </h3>
 
-            <p>
-                View daily accounting transactions
-                in one place.
-            </p>
+<!-- BANK BOOK -->
 
-            <a
-                href="#about"
-                class="feature-link">
+<div class="feature-card">
 
-                Learn More →
+<div class="feature-icon">🏦</div>
 
-            </a>
+<h3>Bank Book</h3>
 
-        </div>
+<p>
+Manage bank transactions and
+account balances efficiently.
+</p>
 
+<a
+href="#about"
+class="feature-link">
 
-        <div class="feature-card">
+Learn More →
 
-            <div class="feature-icon">
-                💾
-            </div>
+</a>
 
-            <h3>
-                Backup
-            </h3>
+</div>
 
-            <p>
-                Create backups of your important
-                accounting data.
-            </p>
 
-            <a
-                href="#about"
-                class="feature-link">
+<!-- DAY BOOK -->
 
-                Learn More →
+<div class="feature-card">
 
-            </a>
+<div class="feature-icon">📅</div>
 
-        </div>
+<h3>Day Book</h3>
 
+<p>
+View daily accounting transactions
+in one place.
+</p>
 
-        <div class="feature-card">
+<a
+href="#about"
+class="feature-link">
 
-            <div class="feature-icon">
-                ♻️
-            </div>
+Learn More →
 
-            <h3>
-                Restore
-            </h3>
+</a>
 
-            <p>
-                Restore your accounting database
-                whenever required.
-            </p>
+</div>
 
-            <a
-                href="#about"
-                class="feature-link">
 
-                Learn More →
+<!-- BACKUP -->
 
-            </a>
+<div class="feature-card">
 
-        </div>
+<div class="feature-icon">💾</div>
 
+<h3>Backup</h3>
 
-        <div class="feature-card">
+<p>
+Create backups of your important
+accounting data.
+</p>
 
-            <div class="feature-icon">
-                ⚙️
-            </div>
+<a
+href="#about"
+class="feature-link">
 
-            <h3>
-                Settings
-            </h3>
+Learn More →
 
-            <p>
-                Configure software preferences
-                and application settings.
-            </p>
+</a>
 
-            <a
-                href="#about"
-                class="feature-link">
+</div>
 
-                Learn More →
 
-            </a>
+<!-- RESTORE -->
 
-        </div>
+<div class="feature-card">
 
+<div class="feature-icon">♻️</div>
 
-    </div>
+<h3>Restore</h3>
+
+<p>
+Restore your accounting database
+whenever required.
+</p>
+
+<a
+href="#about"
+class="feature-link">
+
+Learn More →
+
+</a>
+
+</div>
+
+
+<!-- SETTINGS -->
+
+<div class="feature-card">
+
+<div class="feature-icon">⚙️</div>
+
+<h3>Settings</h3>
+
+<p>
+Configure software preferences
+and application settings.
+</p>
+
+<a
+href="#about"
+class="feature-link">
+
+Learn More →
+
+</a>
+
+</div>
+
+
+</div>
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      SCREENSHOTS
-========================= -->
+===================================================== -->
 
 <section
-    class="section"
-    id="screenshots">
+class="section screenshot-section"
+id="screenshots">
 
 
-    <div class="section-heading">
+<div class="section-heading">
 
 
-        <span class="hero-badge">
-            Software Preview
-        </span>
+<span class="hero-badge">
+
+Software Preview
+
+</span>
 
 
-        <h2>
-            See AccoraX In Action
-        </h2>
+<h2>
+
+See AccoraX In Action
+
+</h2>
 
 
-        <p>
+<p>
 
-            A clean and modern interface designed
-            for fast and efficient accounting.
+A clean and modern interface designed
+for fast and efficient accounting.
 
-        </p>
-
-
-    </div>
+</p>
 
 
-
-    <div class="screenshots">
-
-
-        <div class="screenshot-card">
+</div>
 
 
-            <img
-                src="images/dashboard.png"
-                alt="AccoraX Dashboard">
+
+<div class="screenshots">
 
 
-            <div class="screenshot-title">
-
-                AccoraX Dashboard
-
-            </div>
+<div class="screenshot-card">
 
 
-        </div>
+<img
+src="images/dashboard.png"
+alt="AccoraX Dashboard">
 
 
-        <div class="screenshot-card">
+<div class="screenshot-title">
+
+AccoraX Dashboard
+
+</div>
 
 
-            <img
-                src="images/dashboard.png"
-                alt="AccoraX Accounting Software">
+</div>
 
 
-            <div class="screenshot-title">
 
-                Modern Accounting Interface
-
-            </div>
+<div class="screenshot-card">
 
 
-        </div>
+<img
+src="images/dashboard.png"
+alt="AccoraX Software">
 
 
-    </div>
+<div class="screenshot-title">
+
+Modern Accounting Interface
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
 <section
-    class="section about"
-    id="about">
+class="section about"
+id="about">
 
 
-    <div class="section-heading">
+<div class="section-heading">
 
 
-        <span class="hero-badge">
-            About AccoraX
-        </span>
+<span class="hero-badge">
+
+About AccoraX
+
+</span>
 
 
-        <h2>
-            Simple Accounting.
-            Smarter Business.
-        </h2>
+<h2>
+
+Simple Accounting.
+Smarter Business.
+
+</h2>
 
 
-        <p>
-            Built to make everyday accounting easier.
-        </p>
+<p>
+
+Built to make everyday accounting easier.
+
+</p>
 
 
-    </div>
+</div>
 
 
 
-    <div class="about-box">
+<div class="about-box">
 
 
-        <p>
+<p>
 
-            AccoraX is a modern accounting software
-            designed for businesses that want a simple,
-            efficient and professional way to manage
-            their daily accounting operations.
+AccoraX is a modern accounting software
+designed for businesses that want a simple,
+efficient and professional way to manage
+their daily accounting operations.
 
-            From sales and purchases to GST,
-            customers, ledgers, inventory and
-            financial reports, AccoraX brings
-            essential business tools together
-            in one easy-to-use platform.
+From sales and purchases to GST,
+customers, ledgers, inventory and
+financial management, AccoraX brings
+essential business tools together
+in one easy-to-use platform.
 
-        </p>
+</p>
 
 
-    </div>
+</div>
 
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      GST
-========================= -->
+===================================================== -->
 
 <section
-    class="section gst-section"
-    id="gst">
+class="section gst-section"
+id="gst">
 
 
-    <div class="section-heading">
+<div class="section-heading">
 
 
-        <span class="hero-badge">
-            GST Management
-        </span>
+<span class="hero-badge">
+
+GST Management
+
+</span>
 
 
-        <h2>
-            GST Accounting Made Simple
-        </h2>
+<h2>
+
+GST Accounting Made Simple
+
+</h2>
 
 
-        <p>
+<p>
 
-            Manage GST transactions and summaries
-            from one convenient place.
+Manage GST transactions and summaries
+from one convenient place.
 
-        </p>
-
-
-    </div>
+</p>
 
 
-
-    <div class="gst-box">
-
-
-        <div class="gst-content">
-
-
-            <h3>
-                Powerful GST Features
-            </h3>
-
-
-            <p>
-
-                AccoraX helps organize GST-related
-                accounting information and makes
-                everyday GST management easier.
-
-            </p>
-
-
-            <ul class="gst-list">
-
-
-                <li>
-                    GST Summary
-                </li>
-
-
-                <li>
-                    Sales GST Transactions
-                </li>
-
-
-                <li>
-                    Purchase GST Transactions
-                </li>
-
-
-                <li>
-                    Taxable Amount Management
-                </li>
-
-
-                <li>
-                    Input & Output GST Tracking
-                </li>
-
-
-            </ul>
-
-
-        </div>
+</div>
 
 
 
-        <div class="gst-image">
+<div class="gst-box">
 
 
-            <img
-                src="images/dashboard.png"
-                alt="AccoraX GST Accounting">
+<div class="gst-content">
 
 
-        </div>
+<h3>
+
+Powerful GST Features
+
+</h3>
 
 
-    </div>
+<p>
+
+AccoraX helps organize GST-related
+accounting information and makes
+everyday GST management easier.
+
+</p>
+
+
+<ul class="gst-list">
+
+
+<li>
+GST Summary
+</li>
+
+
+<li>
+Sales GST Transactions
+</li>
+
+
+<li>
+Purchase GST Transactions
+</li>
+
+
+<li>
+Taxable Amount Management
+</li>
+
+
+<li>
+Input & Output GST Tracking
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+<div class="gst-image">
+
+
+<img
+src="images/dashboard.png"
+alt="AccoraX GST">
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      DOWNLOAD
-========================= -->
+===================================================== -->
 
 <section
-    class="download-section"
-    id="download">
+class="download-section"
+id="download">
 
 
-    <h2>
+<h2>
 
-        Ready to simplify your accounting?
+Ready to simplify your accounting?
 
-    </h2>
-
-
-    <p>
-
-        Download AccoraX and manage your
-        business smarter.
-
-    </p>
+</h2>
 
 
-    <!-- बाद में यहाँ GitHub Release
-         की actual download link डालेंगे -->
+<p>
 
-    <a
-        href="#"
-        class="download-button">
+Download AccoraX and manage your
+business smarter.
 
-        ⬇ Download AccoraX
+</p>
 
-    </a>
+
+<!--
+IMPORTANT:
+Abhi Download link "#" rakha gaya hai.
+EXE upload hone ke baad yahan actual
+GitHub download link lagayenge.
+-->
+
+
+<a
+href="#"
+class="download-button">
+
+⬇ Download AccoraX
+
+</a>
 
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
 <section
-    class="section"
-    id="contact">
+class="section"
+id="contact">
 
 
-    <div class="section-heading">
+<div class="section-heading">
 
 
-        <span class="hero-badge">
-            Get In Touch
-        </span>
+<span class="hero-badge">
+
+Get In Touch
+
+</span>
 
 
-        <h2>
-            Contact AccoraX
-        </h2>
+<h2>
+
+Contact AccoraX
+
+</h2>
 
 
-        <p>
+<p>
 
-            Have a question about AccoraX?
-            We would love to hear from you.
+Have a question about AccoraX?
+We would love to hear from you.
 
-        </p>
-
-
-    </div>
+</p>
 
 
-
-    <div class="contact-box">
-
-
-        <div class="contact-card">
-
-            <div class="contact-icon">
-                📧
-            </div>
-
-            <h3>
-                Email
-            </h3>
-
-            <p>
-                Coming Soon
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="contact-card">
 
-            <div class="contact-icon">
-                💬
-            </div>
-
-            <h3>
-                Support
-            </h3>
-
-            <p>
-                AccoraX Support
-            </p>
-
-        </div>
+<div class="contact-box">
 
 
-        <div class="contact-card">
+<div class="contact-card">
 
-            <div class="contact-icon">
-                🌐
-            </div>
+<div class="contact-icon">
+📧
+</div>
 
-            <h3>
-                Website
-            </h3>
+<h3>
+Email
+</h3>
 
-            <p>
-                AccoraX
-            </p>
+<p>
+Coming Soon
+</p>
 
-        </div>
+</div>
 
 
-    </div>
+<div class="contact-card">
+
+<div class="contact-icon">
+💬
+</div>
+
+<h3>
+Support
+</h3>
+
+<p>
+AccoraX Support
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+🌐
+</div>
+
+<h3>
+Website
+</h3>
+
+<p>
+AccoraX
+</p>
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
+     PRIVACY + TERMS
+===================================================== -->
+
+<section
+class="section legal"
+id="legal">
+
+
+<div class="section-heading">
+
+
+<span class="hero-badge">
+
+Information
+
+</span>
+
+
+<h2>
+
+Privacy & Terms
+
+</h2>
+
+
+<p>
+
+Important information about using AccoraX.
+
+</p>
+
+
+</div>
+
+
+
+<div class="legal-container">
+
+
+<div class="legal-box"
+id="privacy">
+
+
+<h3>
+
+Privacy Policy
+
+</h3>
+
+
+<p>
+
+AccoraX respects user privacy.
+Any business information entered into
+the software is intended for the user's
+accounting and business management
+purposes. Users should maintain regular
+backups of their important data.
+
+</p>
+
+
+</div>
+
+
+
+<div class="legal-box"
+id="terms">
+
+
+<h3>
+
+Terms & Conditions
+
+</h3>
+
+
+<p>
+
+AccoraX is provided as accounting
+software for business management.
+Users are responsible for the accuracy
+of the accounting information entered
+into the software and should review
+their financial and tax information
+before making official submissions.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
 
-    <div class="footer-content">
+<div class="footer-content">
 
 
-        <div>
+<div>
 
 
-            <div class="footer-logo">
+<div class="footer-logo">
 
 
-                <img
-                    src="images/logo.png"
-                    alt="AccoraX Logo">
+<img
+src="images/logo.png"
+alt="AccoraX Logo">
 
 
-            </div>
+</div>
 
 
-            <p class="footer-description">
+<p class="footer-description">
 
-                Smart & Simple Accounting Software
-                for modern businesses.
+Smart & Simple Accounting Software
+for modern businesses.
 
-            </p>
-
-
-        </div>
+</p>
 
 
-
-        <div class="footer-column">
-
-
-            <h3>
-                Quick Links
-            </h3>
-
-
-            <a href="#home">
-                Home
-            </a>
-
-
-            <a href="#features">
-                Features
-            </a>
-
-
-            <a href="#screenshots">
-                Screenshots
-            </a>
-
-
-            <a href="#about">
-                About
-            </a>
-
-
-            <a href="#download">
-                Download
-            </a>
-
-
-        </div>
+</div>
 
 
 
-        <div class="footer-column">
+<div class="footer-column">
 
 
-            <h3>
-                Information
-            </h3>
+<h3>
+
+Quick Links
+
+</h3>
 
 
-            <a href="#contact">
-                Contact
-            </a>
+<a href="#home">
+Home
+</a>
 
 
-            <a href="#">
-                Privacy Policy
-            </a>
+<a href="#features">
+Features
+</a>
 
 
-            <a href="#">
-                Terms & Conditions
-            </a>
+<a href="#screenshots">
+Screenshots
+</a>
 
 
-        </div>
+<a href="#about">
+About
+</a>
 
 
-    </div>
+<a href="#gst">
+GST
+</a>
+
+
+<a href="#download">
+Download
+</a>
+
+
+</div>
 
 
 
-    <div class="copyright">
+<div class="footer-column">
 
-        © 2026 AccoraX. All Rights Reserved.
 
-    </div>
+<h3>
+
+Information
+
+</h3>
+
+
+<a href="#contact">
+Contact
+</a>
+
+
+<a href="#privacy">
+Privacy Policy
+</a>
+
+
+<a href="#terms">
+Terms & Conditions
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="copyright">
+
+© 2026 AccoraX. All Rights Reserved.
+
+</div>
 
 
 </footer>
