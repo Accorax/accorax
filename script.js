@@ -1,189 +1,190 @@
-/* =========================================
-   ACCORAX WEBSITE SCRIPT
-========================================= */
+/* =====================================================
+   ACCORAX WEBSITE JAVASCRIPT
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
 
 
-/* =========================================
-   MOBILE MENU
-========================================= */
+    /* =================================================
+       MOBILE MENU
+    ================================================= */
 
-const menuButton =
-    document.getElementById("menuButton");
+    const mobileMenu =
+        document.getElementById("mobileMenu");
 
-const mainNav =
-    document.getElementById("mainNav");
-
-
-if (menuButton && mainNav) {
-
-    menuButton.addEventListener("click", function () {
-
-        mainNav.classList.toggle("active");
-
-    });
+    const mobileNav =
+        document.getElementById("mobileNav");
 
 
-    const navLinks =
-        mainNav.querySelectorAll("a");
+    if (mobileMenu && mobileNav) {
 
+        mobileMenu.addEventListener(
+            "click",
+            function () {
 
-    navLinks.forEach(function (link) {
+                mobileNav.classList.toggle("active");
 
-        link.addEventListener("click", function () {
-
-            mainNav.classList.remove("active");
-
-        });
-
-    });
-
-}
-
-
-
-/* =========================================
-   BACK TO TOP
-========================================= */
-
-const topButton =
-    document.getElementById("topButton");
-
-
-window.addEventListener("scroll", function () {
-
-    if (window.scrollY > 400) {
-
-        topButton.classList.add("show");
-
-    } else {
-
-        topButton.classList.remove("show");
+            }
+        );
 
     }
 
-});
+
+    /* =================================================
+       CLOSE MOBILE MENU
+    ================================================= */
+
+    const mobileLinks =
+        document.querySelectorAll(
+            ".mobile-nav a"
+        );
 
 
-if (topButton) {
+    mobileLinks.forEach(function (link) {
 
-    topButton.addEventListener("click", function () {
+        link.addEventListener(
+            "click",
+            function () {
 
-        window.scrollTo({
+                if (mobileNav) {
 
-            top: 0,
+                    mobileNav.classList.remove(
+                        "active"
+                    );
 
-            behavior: "smooth"
+                }
 
-        });
-
-    });
-
-}
-
-
-
-/* =========================================
-   DOWNLOAD BUTTON
-========================================= */
-
-const downloadButton =
-    document.getElementById("downloadButton");
-
-
-if (downloadButton) {
-
-    downloadButton.addEventListener("click", function (event) {
-
-        const downloadFile =
-            "AccoraX-Setup.exe";
-
-
-        /*
-           बाद में जब GitHub पर
-           AccoraX-Setup.exe upload करेंगे,
-           तब यह button काम करेगा।
-        */
-
-
-        const link =
-            document.createElement("a");
-
-
-        link.href =
-            downloadFile;
-
-
-        link.download =
-            downloadFile;
-
-
-        /*
-           अगर अभी setup file मौजूद नहीं है
-           तो browser को error से बचाने के लिए
-           default action रोक रहे हैं।
-        */
-
-
-        event.preventDefault();
-
-
-        alert(
-            "AccoraX download will be available soon."
+            }
         );
 
     });
 
-}
+
+    /* =================================================
+       NAVBAR SHADOW
+    ================================================= */
+
+    const navbar =
+        document.querySelector(".navbar");
 
 
+    window.addEventListener(
+        "scroll",
+        function () {
 
-/* =========================================
-   ACTIVE NAVIGATION
-========================================= */
-
-const sections =
-    document.querySelectorAll("section[id]");
-
-
-const navigationLinks =
-    document.querySelectorAll(".nav a");
+            if (!navbar) {
+                return;
+            }
 
 
-window.addEventListener("scroll", function () {
+            if (window.scrollY > 20) {
 
-    let currentSection = "";
+                navbar.style.boxShadow =
+                    "0 8px 30px rgba(30,40,80,.08)";
 
+            } else {
 
-    sections.forEach(function (section) {
+                navbar.style.boxShadow =
+                    "none";
 
-        const sectionTop =
-            section.offsetTop - 120;
-
-
-        if (window.scrollY >= sectionTop) {
-
-            currentSection =
-                section.getAttribute("id");
+            }
 
         }
+    );
+
+
+    /* =================================================
+       SCROLL REVEAL
+    ================================================= */
+
+    const revealElements =
+        document.querySelectorAll(
+            ".feature-card, .why-card, .trust-item, .contact-item"
+        );
+
+
+    const revealObserver =
+        new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "show"
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    revealElements.forEach(function (element) {
+
+        element.style.opacity = "0";
+
+        element.style.transform =
+            "translateY(20px)";
+
+        element.style.transition =
+            "opacity .6s ease, transform .6s ease";
+
+        revealObserver.observe(element);
 
     });
 
 
-    navigationLinks.forEach(function (link) {
+    /* =================================================
+       ADD SHOW CLASS STYLE
+    ================================================= */
 
-        link.classList.remove("active");
+    const style =
+        document.createElement("style");
 
 
-        if (
-            link.getAttribute("href") ===
-            "#" + currentSection
-        ) {
+    style.textContent = `
 
-            link.classList.add("active");
+        .feature-card.show,
+        .why-card.show,
+        .trust-item.show,
+        .contact-item.show {
+
+            opacity: 1 !important;
+
+            transform:
+                translateY(0) !important;
 
         }
 
+    `;
+
+
+    document.head.appendChild(style);
+
+
+    /* =================================================
+       CURRENT YEAR
+    ================================================= */
+
+    const yearElements =
+        document.querySelectorAll(
+            "[data-year]"
+        );
+
+
+    yearElements.forEach(function (element) {
+
+        element.textContent =
+            new Date().getFullYear();
+
     });
+
 
 });
