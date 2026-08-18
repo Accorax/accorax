@@ -1598,4 +1598,38 @@ footer{
             55px 20px;
 
         border-radius:22px;
-  
+    }
+
+    .download-box h2{
+        font-size:30px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .founder-card{
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:27px 20px;
+    }
+
+    .legal-card{
+        padding:25px 20px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+}
