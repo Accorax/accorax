@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="UTF-8">
@@ -9,93 +8,70 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="AccoraX - Smart, Modern and Simple Accounting Software for Business, GST, Sales, Purchase and Inventory Management.">
-
-    <meta name="keywords"
-          content="AccoraX, accounting software, GST software, billing software, inventory software">
+          content="AccoraX - Modern accounting software for GST, billing, inventory, ledger and business management.">
 
     <meta name="author"
           content="Jagdeesh Sahni">
 
-    <title>AccoraX | Smart Accounting Software</title>
+    <title>AccoraX — Smart Accounting Software</title>
 
-    <link rel="stylesheet"
-          href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
-
 
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-<header class="header">
+<header class="navbar">
 
-    <div class="container navbar">
+    <div class="nav-container">
 
-
-        <!-- LOGO -->
-
-        <a href="#home"
-           class="logo">
-
+        <a href="#home" class="logo-link">
             <img src="images/logo.png"
-                 alt="AccoraX Logo">
-
+                 alt="AccoraX"
+                 class="logo">
         </a>
 
 
-        <!-- NAVIGATION -->
+        <nav class="desktop-nav">
 
-        <nav class="nav"
-             id="mainNav">
+            <a href="#home">Home</a>
 
-            <a href="#home">
-                Home
-            </a>
+            <a href="#features">Features</a>
 
-            <a href="#features">
-                Features
-            </a>
+            <a href="#about">About</a>
 
-            <a href="#about">
-                About
-            </a>
+            <a href="#showcase">Software</a>
 
-            <a href="#download">
-                Download
-            </a>
+            <a href="#download">Download</a>
 
-            <a href="#contact">
-                Contact
-            </a>
+            <a href="#contact">Contact</a>
 
         </nav>
 
 
-        <!-- DOWNLOAD BUTTON -->
-
         <a href="#download"
-           class="nav-button">
+           class="nav-download">
 
-            Download
+            Get AccoraX
+            <span>→</span>
 
         </a>
 
 
-        <!-- MOBILE MENU -->
+        <button class="mobile-menu"
+                id="mobileMenu"
+                aria-label="Open menu">
 
-        <button class="menu-button"
-                id="menuButton"
-                aria-label="Open Menu">
-
-            ☰
+            <span></span>
+            <span></span>
+            <span></span>
 
         </button>
-
 
     </div>
 
@@ -103,91 +79,117 @@
 
 
 
-<!-- =========================
-     HERO SECTION
-========================= -->
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
 
-<section class="hero"
-         id="home">
+<div class="mobile-nav" id="mobileNav">
+
+    <a href="#home">Home</a>
+
+    <a href="#features">Features</a>
+
+    <a href="#about">About</a>
+
+    <a href="#showcase">Software</a>
+
+    <a href="#download">Download</a>
+
+    <a href="#contact">Contact</a>
+
+</div>
 
 
-    <div class="container hero-grid">
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-glow glow-one"></div>
+
+    <div class="hero-glow glow-two"></div>
 
 
-        <!-- HERO CONTENT -->
+    <div class="container hero-container">
+
 
         <div class="hero-content">
 
 
-            <div class="hero-badge">
+            <div class="hero-tag">
 
-                <span>✦</span>
+                <span class="tag-dot"></span>
 
-                Smart Accounting Software
+                Modern Business Accounting
 
             </div>
 
 
             <h1>
 
-                Manage Your Business
+                Accounting made
 
-                <span>
-                    Smarter.
-                </span>
+                <span>simple.</span>
+
+                Business made
+
+                <strong>smarter.</strong>
 
             </h1>
 
 
-            <p>
+            <p class="hero-description">
 
                 AccoraX is a modern accounting solution
-                designed to make business accounting,
-                GST, sales, purchases and inventory
-                management simple and powerful.
+                designed to help businesses manage
+                sales, purchases, GST, inventory,
+                ledgers and financial operations
+                from one powerful platform.
 
             </p>
 
 
-            <!-- BUTTONS -->
-
-            <div class="hero-buttons">
-
+            <div class="hero-actions">
 
                 <a href="#download"
                    class="btn btn-primary">
 
                     Download AccoraX
-                    <span>→</span>
+
+                    <span>↗</span>
 
                 </a>
 
 
-                <a href="#features"
-                   class="btn btn-secondary">
+                <a href="#showcase"
+                   class="btn btn-outline">
 
-                    Explore Features
+                    Explore Software
+
+                    <span>▶</span>
 
                 </a>
-
 
             </div>
 
 
-            <!-- TRUST -->
-
-            <div class="hero-trust">
+            <div class="hero-points">
 
                 <div>
-                    ✓ Easy to Use
+                    <span>✓</span>
+                    Easy to use
                 </div>
 
                 <div>
-                    ✓ Business Ready
+                    <span>✓</span>
+                    GST ready
                 </div>
 
                 <div>
-                    ✓ Modern Interface
+                    <span>✓</span>
+                    Business focused
                 </div>
 
             </div>
@@ -197,38 +199,94 @@
 
 
 
-        <!-- DASHBOARD PREVIEW -->
+        <!-- HERO DASHBOARD -->
 
-        <div class="hero-preview">
-
-
-            <div class="preview-glow"></div>
+        <div class="hero-dashboard">
 
 
-            <div class="dashboard-card">
+            <div class="dashboard-glow"></div>
 
 
-                <div class="dashboard-header">
+            <div class="dashboard-window">
 
-                    <div class="window-buttons">
 
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                <div class="window-header">
+
+                    <div class="window-dots">
+
+                        <i></i>
+                        <i></i>
+                        <i></i>
 
                     </div>
 
+
+                    <div class="window-title">
+
+                        AccoraX Dashboard
+
+                    </div>
+
+
+                    <div class="window-status">
+
+                        ● Live
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-image">
+
+                    <img src="images/dashboard.png"
+                         alt="AccoraX Accounting Dashboard">
+
+                </div>
+
+            </div>
+
+
+            <!-- FLOATING CARD -->
+
+            <div class="floating-stat floating-sales">
+
+                <div class="floating-icon">
+                    ↗
+                </div>
+
+                <div>
+
+                    <small>
+                        Business Growth
+                    </small>
+
                     <strong>
-                        AccoraX
+                        +24.8%
                     </strong>
 
                 </div>
 
+            </div>
 
-                <img src="images/dashboard.png"
-                     alt="AccoraX Accounting Software Dashboard"
-                     class="dashboard-image">
 
+            <div class="floating-stat floating-gst">
+
+                <div class="floating-icon purple">
+                    ✓
+                </div>
+
+                <div>
+
+                    <small>
+                        GST Management
+                    </small>
+
+                    <strong>
+                        Ready
+                    </strong>
+
+                </div>
 
             </div>
 
@@ -242,79 +300,67 @@
 
 
 
-<!-- =========================
-     STATS
-========================= -->
+<!-- =====================================================
+     TRUST BAR
+===================================================== -->
 
-<section class="stats">
+<section class="trust-bar">
 
-    <div class="container stats-grid">
+    <div class="container trust-container">
 
 
-        <div class="stat">
+        <div class="trust-item">
 
-            <div class="stat-icon">
-                📊
+            <div class="trust-icon blue">
+                ₹
             </div>
 
-            <strong>
-                Smart
-            </strong>
-
-            <span>
-                Dashboard
-            </span>
+            <div>
+                <strong>Sales & Billing</strong>
+                <span>Manage transactions easily</span>
+            </div>
 
         </div>
 
 
-        <div class="stat">
+        <div class="trust-item">
 
-            <div class="stat-icon">
-                🧾
+            <div class="trust-icon purple">
+                %
             </div>
 
-            <strong>
-                Easy
-            </strong>
-
-            <span>
-                Billing
-            </span>
+            <div>
+                <strong>GST Management</strong>
+                <span>Organized GST accounting</span>
+            </div>
 
         </div>
 
 
-        <div class="stat">
+        <div class="trust-item">
 
-            <div class="stat-icon">
-                🧮
+            <div class="trust-icon green">
+                #
             </div>
 
-            <strong>
-                GST
-            </strong>
-
-            <span>
-                Management
-            </span>
+            <div>
+                <strong>Inventory</strong>
+                <span>Track your stock</span>
+            </div>
 
         </div>
 
 
-        <div class="stat">
+        <div class="trust-item">
 
-            <div class="stat-icon">
-                📦
+            <div class="trust-icon orange">
+                ≡
             </div>
 
-            <strong>
-                Complete
-            </strong>
-
-            <span>
-                Inventory
-            </span>
+            <div>
+                <strong>Reports</strong>
+                <span>Business insights</span>
+            </div>
 
         </div>
 
@@ -325,53 +371,46 @@
 
 
 
-<!-- =========================
+<!-- =====================================================
      FEATURES
-========================= -->
+===================================================== -->
 
 <section class="section features-section"
          id="features">
-
 
     <div class="container">
 
 
         <div class="section-heading">
 
-
-            <div class="section-label">
-                FEATURES
-            </div>
-
+            <span class="eyebrow">
+                POWERFUL FEATURES
+            </span>
 
             <h2>
-                Everything You Need
-                <span>In One Place.</span>
+                Everything your business
+                <span>needs.</span>
             </h2>
 
-
             <p>
-
-                Powerful tools designed to simplify
-                your daily accounting and business
-                management.
-
+                Powerful accounting tools combined
+                with a clean and simple interface.
             </p>
-
 
         </div>
 
 
+        <div class="feature-grid">
 
-        <div class="features-grid">
 
+            <article class="feature-card">
 
-            <!-- FEATURE 1 -->
+                <div class="feature-number">
+                    01
+                </div>
 
-            <div class="feature-card">
-
-                <div class="feature-icon blue">
-                    🧾
+                <div class="feature-icon blue-bg">
+                    ₹
                 </div>
 
                 <h3>
@@ -379,55 +418,27 @@
                 </h3>
 
                 <p>
-
-                    Create and manage sales invoices,
-                    purchases and daily transactions
-                    quickly and efficiently.
-
+                    Manage sales invoices, purchase
+                    transactions and daily business
+                    entries quickly and efficiently.
                 </p>
 
                 <a href="#download">
-                    Learn More →
+                    Explore feature →
                 </a>
 
-            </div>
+            </article>
 
 
 
-            <!-- FEATURE 2 -->
+            <article class="feature-card">
 
-            <div class="feature-card">
-
-                <div class="feature-icon purple">
-                    📊
+                <div class="feature-number">
+                    02
                 </div>
 
-                <h3>
-                    Business Dashboard
-                </h3>
-
-                <p>
-
-                    Get a complete overview of your
-                    business with an attractive and
-                    easy-to-understand dashboard.
-
-                </p>
-
-                <a href="#download">
-                    Learn More →
-                </a>
-
-            </div>
-
-
-
-            <!-- FEATURE 3 -->
-
-            <div class="feature-card">
-
-                <div class="feature-icon green">
-                    🧮
+                <div class="feature-icon purple-bg">
+                    %
                 </div>
 
                 <h3>
@@ -435,100 +446,126 @@
                 </h3>
 
                 <p>
-
-                    Manage GST transactions, GST
-                    summaries and accounting data
-                    efficiently.
-
+                    Keep GST transactions and summaries
+                    organized with dedicated accounting
+                    tools.
                 </p>
 
                 <a href="#download">
-                    Learn More →
+                    Explore feature →
                 </a>
 
-            </div>
+            </article>
 
 
 
-            <!-- FEATURE 4 -->
+            <article class="feature-card">
 
-            <div class="feature-card">
+                <div class="feature-number">
+                    03
+                </div>
 
-                <div class="feature-icon orange">
-                    👥
+                <div class="feature-icon green-bg">
+                    #
                 </div>
 
                 <h3>
-                    Customer & Ledger
+                    Inventory
                 </h3>
 
                 <p>
-
-                    Manage customers, suppliers,
-                    ledgers and accounts from one
-                    convenient system.
-
+                    Manage items, units, stock and
+                    inventory transactions from
+                    one place.
                 </p>
 
                 <a href="#download">
-                    Learn More →
+                    Explore feature →
                 </a>
 
-            </div>
+            </article>
 
 
 
-            <!-- FEATURE 5 -->
+            <article class="feature-card">
 
-            <div class="feature-card">
+                <div class="feature-number">
+                    04
+                </div>
 
-                <div class="feature-icon pink">
-                    📦
+                <div class="feature-icon orange-bg">
+                    ≡
                 </div>
 
                 <h3>
-                    Inventory Management
+                    Ledger & Accounts
                 </h3>
 
                 <p>
-
-                    Track items, units, stock and
-                    inventory transactions with ease.
-
+                    Organize customers, suppliers,
+                    ledgers and accounts with ease.
                 </p>
 
                 <a href="#download">
-                    Learn More →
+                    Explore feature →
                 </a>
 
-            </div>
+            </article>
 
 
 
-            <!-- FEATURE 6 -->
+            <article class="feature-card">
 
-            <div class="feature-card">
+                <div class="feature-number">
+                    05
+                </div>
 
-                <div class="feature-icon cyan">
-                    🔐
+                <div class="feature-icon pink-bg">
+                    ◈
                 </div>
 
                 <h3>
-                    Secure Data
+                    Business Reports
                 </h3>
 
                 <p>
-
-                    Keep your important accounting
-                    information organized and protected.
-
+                    Understand your business through
+                    useful accounting and financial
+                    reports.
                 </p>
 
                 <a href="#download">
-                    Learn More →
+                    Explore feature →
                 </a>
 
-            </div>
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    06
+                </div>
+
+                <div class="feature-icon cyan-bg">
+                    ✓
+                </div>
+
+                <h3>
+                    Secure & Organized
+                </h3>
+
+                <p>
+                    Keep your accounting information
+                    structured and easily accessible.
+                </p>
+
+                <a href="#download">
+                    Explore feature →
+                </a>
+
+            </article>
 
 
         </div>
@@ -539,55 +576,73 @@
 
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
-<section class="about-section"
+<section class="section about-section"
          id="about">
 
-
-    <div class="container about-grid">
-
-
-        <!-- IMAGE -->
-
-        <div class="about-image">
+    <div class="container about-container">
 
 
-            <div class="about-card">
+        <div class="about-visual">
 
-                <div class="about-card-top">
 
-                    <span>
-                        AccoraX
-                    </span>
+            <div class="about-panel">
 
-                    <span>
-                        Accounting
-                    </span>
+                <div class="about-panel-header">
+
+                    <div>
+                        <span>ACCORAX</span>
+                        <strong>Business Overview</strong>
+                    </div>
+
+                    <div class="mini-badge">
+                        2026
+                    </div>
 
                 </div>
 
 
-                <div class="about-bars">
+                <div class="overview-cards">
 
-                    <div class="bar bar-1"></div>
+                    <div>
+                        <small>Total Sales</small>
+                        <strong>₹ 2.45L</strong>
+                        <span>+18.4%</span>
+                    </div>
 
-                    <div class="bar bar-2"></div>
-
-                    <div class="bar bar-3"></div>
-
-                    <div class="bar bar-4"></div>
+                    <div>
+                        <small>Purchases</small>
+                        <strong>₹ 1.62L</strong>
+                        <span>+12.2%</span>
+                    </div>
 
                 </div>
 
 
-                <div class="about-small-cards">
+                <div class="mini-chart">
 
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div class="chart-grid"></div>
+
+                    <div class="chart-line">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+
+                <div class="overview-footer">
+
+                    <span>Business Performance</span>
+
+                    <strong>Growing steadily</strong>
 
                 </div>
 
@@ -597,70 +652,59 @@
         </div>
 
 
-
-        <!-- CONTENT -->
 
         <div class="about-content">
 
 
-            <div class="section-label">
+            <span class="eyebrow">
                 ABOUT ACCORAX
-            </div>
+            </span>
 
 
             <h2>
-
-                Accounting Made
-                <span>Simple & Smart.</span>
-
+                Built for businesses
+                that want to work
+                <span>smarter.</span>
             </h2>
 
 
             <p>
-
-                AccoraX is designed for businesses
-                that want a modern, simple and
-                efficient accounting experience.
-
+                AccoraX is created with one simple
+                objective — make business accounting
+                easier, clearer and more efficient.
             </p>
 
 
             <p>
-
-                From daily transactions and billing
-                to GST, inventory, customers and
-                financial management, AccoraX brings
-                everything together in one place.
-
+                From everyday billing to GST,
+                inventory, ledgers and financial
+                management, AccoraX brings essential
+                business tools together in one
+                modern application.
             </p>
 
 
-            <div class="about-list">
-
-
-                <div>
-                    <span>✓</span>
-                    Simple and clean interface
-                </div>
-
+            <div class="about-checks">
 
                 <div>
                     <span>✓</span>
-                    Powerful accounting tools
+                    Simple and modern interface
                 </div>
-
 
                 <div>
                     <span>✓</span>
-                    GST and inventory management
+                    Designed for everyday accounting
                 </div>
-
 
                 <div>
                     <span>✓</span>
-                    Designed for everyday business
+                    GST and inventory ready
                 </div>
 
+                <div>
+                    <span>✓</span>
+                    Powerful business management
+                </div>
 
             </div>
 
@@ -674,42 +718,182 @@
 
 
 
-<!-- =========================
+<!-- =====================================================
+     SOFTWARE SHOWCASE
+===================================================== -->
+
+<section class="showcase-section"
+         id="showcase">
+
+    <div class="container">
+
+
+        <div class="section-heading light-heading">
+
+            <span class="eyebrow">
+                THE ACCORAX EXPERIENCE
+            </span>
+
+            <h2>
+                One place for your
+                <span>entire business.</span>
+            </h2>
+
+            <p>
+                A clean workspace designed to make
+                everyday accounting faster and easier.
+            </p>
+
+        </div>
+
+
+        <div class="showcase-window">
+
+
+            <div class="showcase-top">
+
+                <div class="window-dots">
+
+                    <i></i>
+                    <i></i>
+                    <i></i>
+
+                </div>
+
+                <span>
+                    AccoraX Accounting Software
+                </span>
+
+                <div></div>
+
+            </div>
+
+
+            <div class="showcase-content">
+
+
+                <div class="showcase-sidebar">
+
+                    <div class="side-logo">
+                        A
+                    </div>
+
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div class="showcase-main">
+
+
+                    <div class="showcase-title">
+
+                        <div>
+                            <small>Good morning</small>
+                            <h3>Business Dashboard</h3>
+                        </div>
+
+                        <div class="showcase-date">
+                            Today
+                        </div>
+
+                    </div>
+
+
+                    <div class="showcase-cards">
+
+                        <div>
+                            <small>Cash in Hand</small>
+                            <strong>₹50,000</strong>
+                            <span>Available balance</span>
+                        </div>
+
+                        <div>
+                            <small>Total Sales</small>
+                            <strong>₹2,45,800</strong>
+                            <span>Current period</span>
+                        </div>
+
+                        <div>
+                            <small>Receivables</small>
+                            <strong>₹85,400</strong>
+                            <span>Pending amount</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="showcase-chart">
+
+                        <div class="chart-heading">
+
+                            <strong>
+                                Sales Overview
+                            </strong>
+
+                            <span>
+                                This Year
+                            </span>
+
+                        </div>
+
+
+                        <div class="bars">
+
+                            <i style="height:35%"></i>
+                            <i style="height:48%"></i>
+                            <i style="height:42%"></i>
+                            <i style="height:65%"></i>
+                            <i style="height:55%"></i>
+                            <i style="height:76%"></i>
+                            <i style="height:68%"></i>
+                            <i style="height:90%"></i>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
      WHY ACCORAX
-========================= -->
+===================================================== -->
 
-<section class="why-section">
-
+<section class="section why-section">
 
     <div class="container">
 
 
         <div class="section-heading">
 
-
-            <div class="section-label">
+            <span class="eyebrow">
                 WHY ACCORAX
-            </div>
-
+            </span>
 
             <h2>
-
-                Built For
-                <span>Modern Businesses.</span>
-
+                Simple outside.
+                <span>Powerful inside.</span>
             </h2>
 
-
-            <p>
-
-                Simple enough for everyday use.
-                Powerful enough to manage your business.
-
-            </p>
-
-
         </div>
-
 
 
         <div class="why-grid">
@@ -717,17 +901,17 @@
 
             <div class="why-card">
 
-                <div class="why-number">
+                <div class="why-icon">
                     01
                 </div>
 
                 <h3>
-                    Simple
+                    Easy to Learn
                 </h3>
 
                 <p>
-                    Easy-to-use interface designed
-                    for fast and comfortable work.
+                    A clean interface that keeps
+                    everyday accounting straightforward.
                 </p>
 
             </div>
@@ -735,17 +919,17 @@
 
             <div class="why-card">
 
-                <div class="why-number">
+                <div class="why-icon">
                     02
                 </div>
 
                 <h3>
-                    Powerful
+                    Faster Workflow
                 </h3>
 
                 <p>
-                    Complete accounting tools to
-                    manage your business efficiently.
+                    Access important accounting
+                    operations without unnecessary steps.
                 </p>
 
             </div>
@@ -753,17 +937,35 @@
 
             <div class="why-card">
 
-                <div class="why-number">
+                <div class="why-icon">
                     03
                 </div>
 
                 <h3>
-                    Modern
+                    Better Visibility
                 </h3>
 
                 <p>
-                    Clean, attractive and modern
-                    software experience.
+                    Understand your business with
+                    organized dashboards and reports.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    04
+                </div>
+
+                <h3>
+                    Business Ready
+                </h3>
+
+                <p>
+                    Designed around real business
+                    accounting requirements.
                 </p>
 
             </div>
@@ -777,52 +979,176 @@
 
 
 
-<!-- =========================
-     DOWNLOAD CTA
-========================= -->
+<!-- =====================================================
+     DOWNLOAD
+===================================================== -->
 
 <section class="download-section"
          id="download">
 
+    <div class="download-glow"></div>
+
+
+    <div class="container download-container">
+
+
+        <span class="download-label">
+            READY TO GET STARTED?
+        </span>
+
+
+        <h2>
+            Take control of your
+            <span>business accounting.</span>
+        </h2>
+
+
+        <p>
+            Download AccoraX and experience
+            a simpler way to manage your
+            business accounting.
+        </p>
+
+
+        <div class="download-actions">
+
+            <a href="#"
+               class="download-button">
+
+                <span class="download-icon">
+                    ↓
+                </span>
+
+                <span>
+                    <small>Available for</small>
+                    Download AccoraX
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <div class="download-note">
+
+            Windows Desktop Application
+            <span>•</span>
+            Smart Accounting Software
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="section contact-section"
+         id="contact">
 
     <div class="container">
 
 
-        <div class="download-box">
+        <div class="contact-layout">
 
 
-            <div class="download-content">
+            <div class="contact-text">
 
-
-                <div class="download-label">
-                    GET ACCORAX
-                </div>
-
+                <span class="eyebrow">
+                    CONTACT
+                </span>
 
                 <h2>
-
-                    Ready to Make
-                    Accounting Easier?
-
+                    Let's build a
+                    <span>smarter business.</span>
                 </h2>
 
-
                 <p>
-
-                    Start managing your business
-                    smarter with AccoraX.
-
+                    Have questions about AccoraX?
+                    Get in touch and we will be happy
+                    to hear from you.
                 </p>
 
 
-                <a href="#"
-                   class="download-main-button"
-                   id="downloadButton">
+                <div class="contact-person">
 
-                    Download AccoraX
+                    <div class="person-avatar">
+                        JS
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Developer
+                        </small>
+
+                        <strong>
+                            Jagdeesh Sahni
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-details">
+
+
+                <a href="tel:+919368349957"
+                   class="contact-item">
+
+                    <div class="contact-item-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Call / Mobile
+                        </small>
+
+                        <strong>
+                            +91 9368349957
+                        </strong>
+
+                    </div>
 
                     <span>
-                        ↓
+                        →
+                    </span>
+
+                </a>
+
+
+                <a href="mailto:jagdeeshsahni777@gmail.com"
+                   class="contact-item">
+
+                    <div class="contact-item-icon">
+                        @
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Email
+                        </small>
+
+                        <strong>
+                            jagdeeshsahni777@gmail.com
+                        </strong>
+
+                    </div>
+
+                    <span>
+                        →
                     </span>
 
                 </a>
@@ -831,13 +1157,6 @@
             </div>
 
 
-            <div class="download-icon">
-
-                💻
-
-            </div>
-
-
         </div>
 
     </div>
@@ -846,85 +1165,163 @@
 
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-<section class="contact-section"
-         id="contact">
-
-
-    <div class="container">
+<footer class="footer">
 
 
-        <div class="section-heading">
+    <div class="container footer-main">
 
 
-            <div class="section-label">
-                CONTACT
-            </div>
+        <div class="footer-brand">
 
 
-            <h2>
-
-                Get In
-                <span>Touch.</span>
-
-            </h2>
+            <img src="images/logo.png"
+                 alt="AccoraX">
 
 
             <p>
-
-                Have a question about AccoraX?
-                Feel free to contact us.
-
+                Modern accounting software
+                designed to make business
+                accounting simple, smart and
+                efficient.
             </p>
+
+
+            <div class="footer-social">
+
+                <a href="#" aria-label="Facebook">
+                    f
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    ◎
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    ▶
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    in
+                </a>
+
+            </div>
 
 
         </div>
 
 
 
-        <div class="contact-grid">
+        <div class="footer-column">
+
+            <h3>
+                Product
+            </h3>
+
+            <a href="#features">
+                Features
+            </a>
+
+            <a href="#showcase">
+                Software
+            </a>
+
+            <a href="#download">
+                Download
+            </a>
+
+            <a href="#about">
+                About AccoraX
+            </a>
+
+        </div>
 
 
-            <!-- NAME -->
 
-            <div class="contact-card">
+        <div class="footer-column">
 
-                <div class="contact-icon">
-                    👤
-                </div>
+            <h3>
+                Accounting
+            </h3>
+
+            <a href="#features">
+                Sales & Purchase
+            </a>
+
+            <a href="#features">
+                GST Management
+            </a>
+
+            <a href="#features">
+                Inventory
+            </a>
+
+            <a href="#features">
+                Ledger & Accounts
+            </a>
+
+            <a href="#features">
+                Reports
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Company
+            </h3>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column footer-contact-column">
+
+            <h3>
+                Contact
+            </h3>
+
+
+            <div class="footer-contact-row">
+
+                <span>👤</span>
 
                 <div>
-
-                    <small>
-                        Developer
-                    </small>
-
-                    <strong>
-                        Jagdeesh Sahni
-                    </strong>
-
+                    <small>Developer</small>
+                    <strong>Jagdeesh Sahni</strong>
                 </div>
 
             </div>
 
 
+            <div class="footer-contact-row">
 
-            <!-- MOBILE -->
-
-            <div class="contact-card">
-
-                <div class="contact-icon">
-                    📱
-                </div>
+                <span>☎</span>
 
                 <div>
-
-                    <small>
-                        Mobile
-                    </small>
+                    <small>Mobile</small>
 
                     <a href="tel:+919368349957">
                         +91 9368349957
@@ -935,20 +1332,12 @@
             </div>
 
 
+            <div class="footer-contact-row">
 
-            <!-- EMAIL -->
-
-            <div class="contact-card">
-
-                <div class="contact-icon">
-                    ✉️
-                </div>
+                <span>@</span>
 
                 <div>
-
-                    <small>
-                        Email
-                    </small>
+                    <small>Email</small>
 
                     <a href="mailto:jagdeeshsahni777@gmail.com">
                         jagdeeshsahni777@gmail.com
@@ -961,141 +1350,34 @@
 
         </div>
 
+
     </div>
 
-</section>
 
 
+    <div class="footer-bottom">
 
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer class="footer">
-
-
-    <div class="container footer-grid">
-
-
-        <!-- BRAND -->
-
-        <div class="footer-brand">
-
-
-            <a href="#home"
-               class="footer-logo">
-
-                <img src="images/logo.png"
-                     alt="AccoraX Logo">
-
-            </a>
+        <div class="container footer-bottom-inner">
 
 
             <p>
+                © 2026 AccoraX.
+                All Rights Reserved.
+            </p>
 
+
+            <p>
                 Smart & Simple Accounting Software
-                designed to help businesses work
-                better and smarter.
+            </p>
 
+
+            <p>
+                Developed by
+                <strong>Jagdeesh Sahni</strong>
             </p>
 
 
         </div>
-
-
-
-        <!-- PRODUCT -->
-
-        <div class="footer-column">
-
-            <h3>
-                Product
-            </h3>
-
-            <a href="#features">
-                Features
-            </a>
-
-            <a href="#about">
-                About AccoraX
-            </a>
-
-            <a href="#download">
-                Download
-            </a>
-
-        </div>
-
-
-
-        <!-- QUICK LINKS -->
-
-        <div class="footer-column">
-
-            <h3>
-                Quick Links
-            </h3>
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#features">
-                Features
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
-
-
-
-        <!-- CONTACT -->
-
-        <div class="footer-column">
-
-            <h3>
-                Contact
-            </h3>
-
-            <a href="tel:+919368349957">
-                +91 9368349957
-            </a>
-
-            <a href="mailto:jagdeeshsahni777@gmail.com">
-                Email Us
-            </a>
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- FOOTER BOTTOM -->
-
-    <div class="container footer-bottom">
-
-
-        <p>
-
-            © 2026 AccoraX. All Rights Reserved.
-
-        </p>
-
-
-        <p>
-
-            Developed by
-            <strong>
-                Jagdeesh Sahni
-            </strong>
-
-        </p>
-
 
     </div>
 
@@ -1104,20 +1386,7 @@
 
 
 
-<!-- BACK TO TOP -->
-
-<button id="topButton"
-        class="top-button">
-
-    ↑
-
-</button>
-
-
-
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
