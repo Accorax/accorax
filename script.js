@@ -26,9 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-
     /* =================================================
-       CLOSE MOBILE MENU
+       CLOSE MOBILE MENU AFTER CLICK
     ================================================= */
 
     const navLinks =
@@ -57,9 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-
     /* =================================================
-       HEADER SHADOW
+       HEADER SHADOW ON SCROLL
     ================================================= */
 
     const header =
@@ -69,6 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener(
         "scroll",
         function () {
+
+            if (!header) {
+                return;
+            }
+
 
             if (window.scrollY > 20) {
 
@@ -84,5 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     );
+
 
 });
