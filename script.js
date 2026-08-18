@@ -1,190 +1,189 @@
-/* =====================================================
-   ACCORAX WEBSITE JAVASCRIPT
-===================================================== */
-
-document.addEventListener("DOMContentLoaded", function () {
+/* =========================================
+   ACCORAX WEBSITE SCRIPT
+========================================= */
 
 
-    /* =================================================
-       MOBILE MENU
-    ================================================= */
+/* =========================================
+   MOBILE MENU
+========================================= */
 
-    const mobileMenu =
-        document.getElementById("mobileMenu");
+const menuButton =
+    document.getElementById("menuButton");
 
-    const mobileNav =
-        document.getElementById("mobileNav");
+const mainNav =
+    document.getElementById("mainNav");
 
 
-    if (mobileMenu && mobileNav) {
+if (menuButton && mainNav) {
 
-        mobileMenu.addEventListener(
-            "click",
-            function () {
+    menuButton.addEventListener("click", function () {
 
-                mobileNav.classList.toggle("active");
+        mainNav.classList.toggle("active");
 
-            }
-        );
+    });
+
+
+    const navLinks =
+        mainNav.querySelectorAll("a");
+
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mainNav.classList.remove("active");
+
+        });
+
+    });
+
+}
+
+
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+const topButton =
+    document.getElementById("topButton");
+
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 400) {
+
+        topButton.classList.add("show");
+
+    } else {
+
+        topButton.classList.remove("show");
 
     }
 
-
-    /* =================================================
-       CLOSE MOBILE MENU
-    ================================================= */
-
-    const mobileLinks =
-        document.querySelectorAll(
-            ".mobile-nav a"
-        );
+});
 
 
-    mobileLinks.forEach(function (link) {
+if (topButton) {
 
-        link.addEventListener(
-            "click",
-            function () {
+    topButton.addEventListener("click", function () {
 
-                if (mobileNav) {
+        window.scrollTo({
 
-                    mobileNav.classList.remove(
-                        "active"
-                    );
+            top: 0,
 
-                }
+            behavior: "smooth"
 
-            }
+        });
+
+    });
+
+}
+
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+const downloadButton =
+    document.getElementById("downloadButton");
+
+
+if (downloadButton) {
+
+    downloadButton.addEventListener("click", function (event) {
+
+        const downloadFile =
+            "AccoraX-Setup.exe";
+
+
+        /*
+           बाद में जब GitHub पर
+           AccoraX-Setup.exe upload करेंगे,
+           तब यह button काम करेगा।
+        */
+
+
+        const link =
+            document.createElement("a");
+
+
+        link.href =
+            downloadFile;
+
+
+        link.download =
+            downloadFile;
+
+
+        /*
+           अगर अभी setup file मौजूद नहीं है
+           तो browser को error से बचाने के लिए
+           default action रोक रहे हैं।
+        */
+
+
+        event.preventDefault();
+
+
+        alert(
+            "AccoraX download will be available soon."
         );
 
     });
 
-
-    /* =================================================
-       NAVBAR SHADOW
-    ================================================= */
-
-    const navbar =
-        document.querySelector(".navbar");
+}
 
 
-    window.addEventListener(
-        "scroll",
-        function () {
 
-            if (!navbar) {
-                return;
-            }
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
 
-
-            if (window.scrollY > 20) {
-
-                navbar.style.boxShadow =
-                    "0 8px 30px rgba(30,40,80,.08)";
-
-            } else {
-
-                navbar.style.boxShadow =
-                    "none";
-
-            }
-
-        }
-    );
+const sections =
+    document.querySelectorAll("section[id]");
 
 
-    /* =================================================
-       SCROLL REVEAL
-    ================================================= */
-
-    const revealElements =
-        document.querySelectorAll(
-            ".feature-card, .why-card, .trust-item, .contact-item"
-        );
+const navigationLinks =
+    document.querySelectorAll(".nav a");
 
 
-    const revealObserver =
-        new IntersectionObserver(
-            function (entries) {
+window.addEventListener("scroll", function () {
 
-                entries.forEach(function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add(
-                            "show"
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
+    let currentSection = "";
 
 
-    revealElements.forEach(function (element) {
+    sections.forEach(function (section) {
 
-        element.style.opacity = "0";
-
-        element.style.transform =
-            "translateY(20px)";
-
-        element.style.transition =
-            "opacity .6s ease, transform .6s ease";
-
-        revealObserver.observe(element);
-
-    });
+        const sectionTop =
+            section.offsetTop - 120;
 
 
-    /* =================================================
-       ADD SHOW CLASS STYLE
-    ================================================= */
+        if (window.scrollY >= sectionTop) {
 
-    const style =
-        document.createElement("style");
-
-
-    style.textContent = `
-
-        .feature-card.show,
-        .why-card.show,
-        .trust-item.show,
-        .contact-item.show {
-
-            opacity: 1 !important;
-
-            transform:
-                translateY(0) !important;
+            currentSection =
+                section.getAttribute("id");
 
         }
 
-    `;
-
-
-    document.head.appendChild(style);
-
-
-    /* =================================================
-       CURRENT YEAR
-    ================================================= */
-
-    const yearElements =
-        document.querySelectorAll(
-            "[data-year]"
-        );
-
-
-    yearElements.forEach(function (element) {
-
-        element.textContent =
-            new Date().getFullYear();
-
     });
 
+
+    navigationLinks.forEach(function (link) {
+
+        link.classList.remove("active");
+
+
+        if (
+            link.getAttribute("href") ===
+            "#" + currentSection
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
 
 });
