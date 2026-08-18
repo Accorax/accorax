@@ -164,9 +164,6 @@ nav a:hover{
     max-width:600px;
 }
 
-
-/* BADGE */
-
 .hero-badge{
     display:inline-block;
 
@@ -185,9 +182,6 @@ nav a:hover{
     margin-bottom:20px;
 }
 
-
-/* TITLE */
-
 .hero h1{
     font-size:58px;
 
@@ -202,9 +196,6 @@ nav a:hover{
     color:#2563eb;
 }
 
-
-/* DESCRIPTION */
-
 .hero-description{
     color:#667085;
 
@@ -214,9 +205,6 @@ nav a:hover{
 
     margin-bottom:32px;
 }
-
-
-/* BUTTONS */
 
 .hero-buttons{
     display:flex;
@@ -277,7 +265,7 @@ nav a:hover{
 
 
 /* =====================================================
-   DASHBOARD PREVIEW
+   DASHBOARD
 ===================================================== */
 
 .hero-right{
@@ -736,7 +724,7 @@ nav a:hover{
 ===================================================== */
 
 .contact-box{
-    max-width:900px;
+    max-width:1000px;
 
     margin:45px auto 0;
 
@@ -755,7 +743,7 @@ nav a:hover{
 
     border-radius:16px;
 
-    padding:25px;
+    padding:28px;
 
     text-align:center;
 
@@ -764,22 +752,93 @@ nav a:hover{
 
 .contact-card:hover{
     transform:translateY(-5px);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.07);
 }
 
 .contact-icon{
-    font-size:28px;
+    font-size:30px;
 
     margin-bottom:10px;
 }
 
 .contact-card h3{
-    margin-bottom:5px;
+    margin-bottom:7px;
 }
 
 .contact-card p{
     color:#667085;
 
     font-size:14px;
+
+    margin-bottom:15px;
+}
+
+.contact-button{
+    display:inline-block;
+
+    padding:9px 16px;
+
+    border-radius:9px;
+
+    background:#eaf1ff;
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.contact-button:hover{
+    background:#2563eb;
+
+    color:white;
+}
+
+
+/* =====================================================
+   FOUNDER
+===================================================== */
+
+.founder{
+    max-width:1000px;
+
+    margin:0 auto 80px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    background:white;
+
+    border:1px solid #e8ecf3;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.04);
+}
+
+.founder h2{
+    margin-bottom:8px;
+}
+
+.founder-name{
+    color:#2563eb;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:5px;
+}
+
+.founder p{
+    color:#667085;
 }
 
 
@@ -872,6 +931,24 @@ footer{
 }
 
 .footer-column a:hover{
+    color:white;
+}
+
+.footer-contact{
+    color:#aeb7c7;
+
+    font-size:14px;
+
+    margin-bottom:8px;
+}
+
+.footer-contact a{
+    display:inline;
+
+    color:#aeb7c7;
+}
+
+.footer-contact a:hover{
     color:white;
 }
 
@@ -1065,8 +1142,6 @@ alt="AccoraX Logo">
 
 <a href="#gst">GST</a>
 
-<a href="#download">Download</a>
-
 <a href="#contact">Contact</a>
 
 </nav>
@@ -1088,7 +1163,7 @@ Download
 
 
 <!-- =====================================================
-     HOME
+     HERO
 ===================================================== -->
 
 <section
@@ -1161,7 +1236,7 @@ Explore Features
 
 <img
 src="images/dashboard.png"
-alt="AccoraX Dashboard">
+alt="AccoraX Accounting Software Dashboard">
 
 
 </div>
@@ -1183,7 +1258,9 @@ alt="AccoraX Dashboard">
 
 <div class="stat">
 
-<h3>GST</h3>
+<h3>
+GST
+</h3>
 
 <p>
 Complete GST Management
@@ -1194,7 +1271,9 @@ Complete GST Management
 
 <div class="stat">
 
-<h3>Easy</h3>
+<h3>
+Easy
+</h3>
 
 <p>
 Simple & User Friendly
@@ -1205,7 +1284,9 @@ Simple & User Friendly
 
 <div class="stat">
 
-<h3>Smart</h3>
+<h3>
+Smart
+</h3>
 
 <p>
 Modern Business Accounting
@@ -1260,13 +1341,13 @@ software.
 <div class="features">
 
 
-<!-- COMPANY -->
-
 <div class="feature-card">
 
 <div class="feature-icon">🏢</div>
 
-<h3>Company Master</h3>
+<h3>
+Company Master
+</h3>
 
 <p>
 Create and manage your business
@@ -1284,13 +1365,14 @@ Learn More →
 </div>
 
 
-<!-- GROUP -->
 
 <div class="feature-card">
 
 <div class="feature-icon">📁</div>
 
-<h3>Group Master</h3>
+<h3>
+Group Master
+</h3>
 
 <p>
 Organize your ledgers and accounts
@@ -1308,13 +1390,14 @@ Learn More →
 </div>
 
 
-<!-- LEDGER -->
 
 <div class="feature-card">
 
 <div class="feature-icon">📒</div>
 
-<h3>Ledger Master</h3>
+<h3>
+Ledger Master
+</h3>
 
 <p>
 Manage customers, suppliers,
@@ -1332,13 +1415,14 @@ Learn More →
 </div>
 
 
-<!-- ITEM -->
 
 <div class="feature-card">
 
 <div class="feature-icon">📦</div>
 
-<h3>Item Master</h3>
+<h3>
+Item Master
+</h3>
 
 <p>
 Manage products, stock details,
@@ -1356,13 +1440,14 @@ Learn More →
 </div>
 
 
-<!-- UNIT -->
 
 <div class="feature-card">
 
 <div class="feature-icon">⚖️</div>
 
-<h3>Unit Master</h3>
+<h3>
+Unit Master
+</h3>
 
 <p>
 Create and manage measurement
@@ -1380,13 +1465,14 @@ Learn More →
 </div>
 
 
-<!-- SALES -->
 
 <div class="feature-card">
 
 <div class="feature-icon">🧾</div>
 
-<h3>Sales</h3>
+<h3>
+Sales
+</h3>
 
 <p>
 Create professional sales invoices
@@ -1404,13 +1490,14 @@ Learn More →
 </div>
 
 
-<!-- PURCHASE -->
 
 <div class="feature-card">
 
 <div class="feature-icon">🛒</div>
 
-<h3>Purchase</h3>
+<h3>
+Purchase
+</h3>
 
 <p>
 Record purchase transactions and
@@ -1428,13 +1515,14 @@ Learn More →
 </div>
 
 
-<!-- PAYMENT -->
 
 <div class="feature-card">
 
 <div class="feature-icon">💵</div>
 
-<h3>Payment</h3>
+<h3>
+Payment
+</h3>
 
 <p>
 Record payments and maintain
@@ -1452,13 +1540,14 @@ Learn More →
 </div>
 
 
-<!-- RECEIPT -->
 
 <div class="feature-card">
 
 <div class="feature-icon">💰</div>
 
-<h3>Receipt</h3>
+<h3>
+Receipt
+</h3>
 
 <p>
 Record customer receipts and
@@ -1476,13 +1565,14 @@ Learn More →
 </div>
 
 
-<!-- JOURNAL -->
 
 <div class="feature-card">
 
 <div class="feature-icon">📑</div>
 
-<h3>Journal</h3>
+<h3>
+Journal
+</h3>
 
 <p>
 Record adjustment entries and
@@ -1500,13 +1590,14 @@ Learn More →
 </div>
 
 
-<!-- GST -->
 
 <div class="feature-card">
 
 <div class="feature-icon">🧮</div>
 
-<h3>GST Summary</h3>
+<h3>
+GST Summary
+</h3>
 
 <p>
 View GST-related transactions
@@ -1524,13 +1615,14 @@ Learn More →
 </div>
 
 
-<!-- CASH BOOK -->
 
 <div class="feature-card">
 
 <div class="feature-icon">💳</div>
 
-<h3>Cash Book</h3>
+<h3>
+Cash Book
+</h3>
 
 <p>
 Track cash receipts, payments
@@ -1548,13 +1640,14 @@ Learn More →
 </div>
 
 
-<!-- BANK BOOK -->
 
 <div class="feature-card">
 
 <div class="feature-icon">🏦</div>
 
-<h3>Bank Book</h3>
+<h3>
+Bank Book
+</h3>
 
 <p>
 Manage bank transactions and
@@ -1572,13 +1665,14 @@ Learn More →
 </div>
 
 
-<!-- DAY BOOK -->
 
 <div class="feature-card">
 
 <div class="feature-icon">📅</div>
 
-<h3>Day Book</h3>
+<h3>
+Day Book
+</h3>
 
 <p>
 View daily accounting transactions
@@ -1596,13 +1690,14 @@ Learn More →
 </div>
 
 
-<!-- BACKUP -->
 
 <div class="feature-card">
 
 <div class="feature-icon">💾</div>
 
-<h3>Backup</h3>
+<h3>
+Backup
+</h3>
 
 <p>
 Create backups of your important
@@ -1620,13 +1715,14 @@ Learn More →
 </div>
 
 
-<!-- RESTORE -->
 
 <div class="feature-card">
 
 <div class="feature-icon">♻️</div>
 
-<h3>Restore</h3>
+<h3>
+Restore
+</h3>
 
 <p>
 Restore your accounting database
@@ -1644,13 +1740,14 @@ Learn More →
 </div>
 
 
-<!-- SETTINGS -->
 
 <div class="feature-card">
 
 <div class="feature-icon">⚙️</div>
 
-<h3>Settings</h3>
+<h3>
+Settings
+</h3>
 
 <p>
 Configure software preferences
@@ -1739,12 +1836,12 @@ AccoraX Dashboard
 
 <img
 src="images/dashboard.png"
-alt="AccoraX Software">
+alt="AccoraX Accounting Software">
 
 
 <div class="screenshot-title">
 
-Modern Accounting Interface
+AccoraX Accounting Interface
 
 </div>
 
@@ -1923,10 +2020,48 @@ Input & Output GST Tracking
 
 <img
 src="images/dashboard.png"
-alt="AccoraX GST">
+alt="AccoraX GST Accounting">
 
 
 </div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOUNDER
+===================================================== -->
+
+<section class="section">
+
+
+<div class="founder">
+
+
+<h2>
+
+Founder & Developer
+
+</h2>
+
+
+<div class="founder-name">
+
+Jagdeesh Sahni
+
+</div>
+
+
+<p>
+
+Creator & Developer of AccoraX
+
+</p>
 
 
 </div>
@@ -1958,14 +2093,6 @@ Download AccoraX and manage your
 business smarter.
 
 </p>
-
-
-<!--
-IMPORTANT:
-Abhi Download link "#" rakha gaya hai.
-EXE upload hone ke baad yahan actual
-GitHub download link lagayenge.
--->
 
 
 <a
@@ -2010,7 +2137,7 @@ Contact AccoraX
 <p>
 
 Have a question about AccoraX?
-We would love to hear from you.
+Get in touch with the developer.
 
 </p>
 
@@ -2022,53 +2149,113 @@ We would love to hear from you.
 <div class="contact-box">
 
 
+<!-- PHONE -->
+
 <div class="contact-card">
+
+
+<div class="contact-icon">
+📱
+</div>
+
+
+<h3>
+
+Mobile
+
+</h3>
+
+
+<p>
+
++91 9368349957
+
+</p>
+
+
+<a
+href="tel:+919368349957"
+class="contact-button">
+
+Call Now
+
+</a>
+
+
+</div>
+
+
+
+<!-- EMAIL -->
+
+<div class="contact-card">
+
 
 <div class="contact-icon">
 📧
 </div>
 
+
 <h3>
+
 Email
+
 </h3>
 
+
 <p>
-Coming Soon
+
+jagdeeshsahni777@gmail.com
+
 </p>
+
+
+<a
+href="mailto:jagdeeshsahni777@gmail.com"
+class="contact-button">
+
+Send Email
+
+</a>
+
 
 </div>
 
 
+
+<!-- WHATSAPP -->
+
 <div class="contact-card">
+
 
 <div class="contact-icon">
 💬
 </div>
 
-<h3>
-Support
-</h3>
-
-<p>
-AccoraX Support
-</p>
-
-</div>
-
-
-<div class="contact-card">
-
-<div class="contact-icon">
-🌐
-</div>
 
 <h3>
-Website
+
+WhatsApp
+
 </h3>
 
+
 <p>
-AccoraX
+
+Chat with AccoraX Support
+
 </p>
+
+
+<a
+href="https://wa.me/919368349957"
+target="_blank"
+class="contact-button">
+
+WhatsApp
+
+</a>
+
 
 </div>
 
@@ -2120,7 +2307,8 @@ Important information about using AccoraX.
 <div class="legal-container">
 
 
-<div class="legal-box"
+<div
+class="legal-box"
 id="privacy">
 
 
@@ -2134,11 +2322,15 @@ Privacy Policy
 <p>
 
 AccoraX respects user privacy.
-Any business information entered into
+Business information entered into
 the software is intended for the user's
 accounting and business management
 purposes. Users should maintain regular
-backups of their important data.
+backups of important accounting data.
+
+For questions regarding AccoraX,
+please contact Jagdeesh Sahni at
+jagdeeshsahni777@gmail.com.
 
 </p>
 
@@ -2147,7 +2339,8 @@ backups of their important data.
 
 
 
-<div class="legal-box"
+<div
+class="legal-box"
 id="terms">
 
 
@@ -2163,10 +2356,12 @@ Terms & Conditions
 AccoraX is provided as accounting
 software for business management.
 Users are responsible for the accuracy
-of the accounting information entered
+of accounting information entered
 into the software and should review
 their financial and tax information
 before making official submissions.
+
+For support, contact Jagdeesh Sahni.
 
 </p>
 
@@ -2207,10 +2402,42 @@ alt="AccoraX Logo">
 
 <p class="footer-description">
 
-Smart & Simple Accounting Software
-for modern businesses.
+AccoraX — Smart & Simple Accounting
+Software for modern businesses.
 
 </p>
+
+
+<br>
+
+
+<div class="footer-contact">
+
+👤 Jagdeesh Sahni
+
+</div>
+
+
+<div class="footer-contact">
+
+📱
+<a href="tel:+919368349957">
++91 9368349957
+</a>
+
+</div>
+
+
+<div class="footer-contact">
+
+📧
+<a href="mailto:jagdeeshsahni777@gmail.com">
+
+jagdeeshsahni777@gmail.com
+
+</a>
+
+</div>
 
 
 </div>
@@ -2296,6 +2523,8 @@ Terms & Conditions
 <div class="copyright">
 
 © 2026 AccoraX. All Rights Reserved.
+<br>
+Developed by Jagdeesh Sahni
 
 </div>
 
