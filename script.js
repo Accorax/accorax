@@ -1,3 +1,7 @@
+/* =====================================================
+   ACCORAX WEBSITE JAVASCRIPT
+===================================================== */
+
 document.addEventListener("DOMContentLoaded", function () {
 
 
@@ -5,20 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
        MOBILE MENU
     ================================================= */
 
-    const menuButton =
-        document.getElementById("menuButton");
+    const mobileMenu =
+        document.getElementById("mobileMenu");
 
-    const navMenu =
-        document.getElementById("navMenu");
+    const mobileNav =
+        document.getElementById("mobileNav");
 
 
-    if (menuButton && navMenu) {
+    if (mobileMenu && mobileNav) {
 
-        menuButton.addEventListener(
+        mobileMenu.addEventListener(
             "click",
             function () {
 
-                navMenu.classList.toggle("active");
+                mobileNav.classList.toggle("active");
 
             }
         );
@@ -27,24 +31,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =================================================
-       CLOSE MOBILE MENU AFTER CLICK
+       CLOSE MOBILE MENU
     ================================================= */
 
-    const navLinks =
+    const mobileLinks =
         document.querySelectorAll(
-            ".nav-menu a"
+            ".mobile-nav a"
         );
 
 
-    navLinks.forEach(function (link) {
+    mobileLinks.forEach(function (link) {
 
         link.addEventListener(
             "click",
             function () {
 
-                if (navMenu) {
+                if (mobileNav) {
 
-                    navMenu.classList.remove(
+                    mobileNav.classList.remove(
                         "active"
                     );
 
@@ -57,36 +61,130 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =================================================
-       HEADER SHADOW ON SCROLL
+       NAVBAR SHADOW
     ================================================= */
 
-    const header =
-        document.querySelector(".header");
+    const navbar =
+        document.querySelector(".navbar");
 
 
     window.addEventListener(
         "scroll",
         function () {
 
-            if (!header) {
+            if (!navbar) {
                 return;
             }
 
 
             if (window.scrollY > 20) {
 
-                header.style.boxShadow =
-                    "0 8px 30px rgba(30,40,90,0.10)";
+                navbar.style.boxShadow =
+                    "0 8px 30px rgba(30,40,80,.08)";
 
             } else {
 
-                header.style.boxShadow =
+                navbar.style.boxShadow =
                     "none";
 
             }
 
         }
     );
+
+
+    /* =================================================
+       SCROLL REVEAL
+    ================================================= */
+
+    const revealElements =
+        document.querySelectorAll(
+            ".feature-card, .why-card, .trust-item, .contact-item"
+        );
+
+
+    const revealObserver =
+        new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "show"
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    revealElements.forEach(function (element) {
+
+        element.style.opacity = "0";
+
+        element.style.transform =
+            "translateY(20px)";
+
+        element.style.transition =
+            "opacity .6s ease, transform .6s ease";
+
+        revealObserver.observe(element);
+
+    });
+
+
+    /* =================================================
+       ADD SHOW CLASS STYLE
+    ================================================= */
+
+    const style =
+        document.createElement("style");
+
+
+    style.textContent = `
+
+        .feature-card.show,
+        .why-card.show,
+        .trust-item.show,
+        .contact-item.show {
+
+            opacity: 1 !important;
+
+            transform:
+                translateY(0) !important;
+
+        }
+
+    `;
+
+
+    document.head.appendChild(style);
+
+
+    /* =================================================
+       CURRENT YEAR
+    ================================================= */
+
+    const yearElements =
+        document.querySelectorAll(
+            "[data-year]"
+        );
+
+
+    yearElements.forEach(function (element) {
+
+        element.textContent =
+            new Date().getFullYear();
+
+    });
 
 
 });
